@@ -1,0 +1,9 @@
+#article-container h1:before,
+#article-container h2:before,
+#article-container h3:before,
+#article-container h4:before,
+#article-container h5:before,
+#article-container h6:before {
+  font-family: "iconfont";
+  content: "\e6a0";
+}
