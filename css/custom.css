@@ -264,20 +264,20 @@ div#archive {
 
 /* 顶栏常驻 */
 .nav-fixed #nav{
-  transform: translateY(58px)!important;
+  -o-transform: translateY(58px)!important;
   -webkit-transform: translateY(58px)!important;
   -moz-transform: translateY(58px)!important;
   -ms-transform: translateY(58px)!important;
-  -o-transform: translateY(58px)!important;
+  transform: translateY(58px)!important;
 }
 #nav{
-  transition: none!important;
+  -o-transition: none!important;
   -webkit-transition: none!important;
   -moz-transition: none!important;
   -ms-transition: none!important;
-  -o-transition: none!important;
+  transition: none!important;
 }
-/* 导航栏居中 */
+/* 导航栏居中
 #nav-right{
   flex:1 1 auto;
   justify-content: flex-end;
@@ -285,7 +285,7 @@ div#archive {
   display: flex;
   flex-wrap:nowrap;
 }
-
+*/
 /* 一级菜单居中 */
 #nav .menus_items {
   position: absolute !important;

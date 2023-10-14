@@ -54,7 +54,7 @@ function saveData(name, data) {
         y: "center",
         minwidth: '300px',
         height: "60%",
-        background: '#49b1f5',
+        background: '#c7ebe3',
         onmaximize: () => { div.innerHTML = `<style>body::-webkit-scrollbar {display: none;}div#changeBgBox {width: 100% !important;}</style>` },
         onrestore: () => { div.innerHTML = '' }
     });
