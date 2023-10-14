@@ -277,7 +277,7 @@ div#archive {
   -ms-transition: none!important;
   transition: none!important;
 }
-/* 导航栏居中
+/* 导航栏居中 */
 #nav-right{
   flex:1 1 auto;
   justify-content: flex-end;
@@ -285,7 +285,7 @@ div#archive {
   display: flex;
   flex-wrap:nowrap;
 }
-*/
+
 /* 一级菜单居中 */
 #nav .menus_items {
   position: absolute !important;
