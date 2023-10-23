@@ -376,7 +376,7 @@ if (localStorage.getItem("reset_2") == undefined) {
       y: "center",
       minwidth: "300px",
       height: "60%",
-      background: 'var(--theme-color)',
+      background: '#c7ebe3',
       onmaximize: () => {
         div.innerHTML = `<style>body::-webkit-scrollbar {display: none;} div#meihuaBox {width: 100% !important;}</style>`;
       },
