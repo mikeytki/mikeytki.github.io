@@ -123,34 +123,40 @@ function createWinbox() {
   // 每一类我放了一个演示，直接往下复制粘贴 a标签 就可以，需要注意的是 函数里面的链接 冒号前面需要添加反斜杠\进行转义
   winbox.body.innerHTML = `
   <div id="article-container" style="padding:10px;">
-  <center><p><button onclick="localStorage.removeItem('blogbg');location.reload();" style="background:linear-gradient(to right, #fc354c, #0abfbc);display:block;width:40%;padding: 15px 0;border-radius:30px;color:white;font-size:1.1em"><i class="fa-solid fa-arrows-rotate"></i> 点我恢复默认背景</button></p></center>
+    <center>
+      <p>
+        <button onclick="localStorage.removeItem('blogbg');location.reload();" style="background:linear-gradient(to right, #fc354c, #0abfbc);display:block;width:40%;padding: 15px 0;border-radius:30px;color:white;font-size:1.1em">
+          <i class="fa-solid fa-arrows-rotate"></i> 点我恢复默认背景
+        </button>
+      </p>
+    </center>
   
   <h3>1. 二次元 </h3>
-  <details class="folding-tag" cyan="">
+  <details class="folding-tag cyan="">
     <summary> 查看二次元背景 </summary>
     <div class="content">
       <div class="bgbox">
-        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/you_2.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/you_2.jpg)')"></a>
-        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/59.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/59.jpg)')"></a>
-        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/sn.png)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/sn.png)')"></a>
-        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/42.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/42.jpg)')"></a>
-        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/17.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/17.jpg)')"></a>
-        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/18.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/18.jpg)')"></a>
-        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/3.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/3.jpg)')"></a>
-        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/43.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/43.jpg)')"></a>
-        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/49.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/49.jpg)')"></a>
-        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/54.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/54.jpg)')"></a>
-        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/55.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/55.jpg)')"></a>
-        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/25.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/25.jpg)')"></a>
-        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/26.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/26.jpg)')"></a>
-        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/27.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/27.jpg)')"></a>
-        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/28.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/28.jpg)')"></a>
-        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/29.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/29.jpg)')"></a>
-        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/33.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/33.jpg)')"></a>
-        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/38.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/38.jpg)')"></a>
-        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/63.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/63.jpg)')"></a>
-        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/45.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/45.jpg)')"></a>
-        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/46.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/46.jpg)')"></a>
+        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/you_2.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/you_2.jpg)')"></a>
+        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/59.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/59.jpg)')"></a>
+        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/sn.png)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/sn.png)')"></a>
+        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/42.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/42.jpg)')"></a>
+        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/17.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/17.jpg)')"></a>
+        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/18.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/18.jpg)')"></a>
+        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/3.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/3.jpg)')"></a>
+        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/43.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/43.jpg)')"></a>
+        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/49.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/49.jpg)')"></a>
+        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/54.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/54.jpg)')"></a>
+        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/55.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/55.jpg)')"></a>
+        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/25.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/25.jpg)')"></a>
+        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/26.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/26.jpg)')"></a>
+        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/27.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/27.jpg)')"></a>
+        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/28.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/28.jpg)')"></a>
+        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/29.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/29.jpg)')"></a>
+        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/33.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/33.jpg)')"></a>
+        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/38.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/38.jpg)')"></a>
+        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/63.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/63.jpg)')"></a>
+        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/45.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/45.jpg)')"></a>
+        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/46.jpg)" class="imgbox" onclick="changeBg('url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/46.jpg)')"></a>
         <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://sourcebucket.s3.bitiful.net/img/yuanshen1.webp)" class="imgbox" onclick="changeBg('url(https://sourcebucket.s3.bitiful.net/img/yuanshen1.webp)')"></a>
         <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://sourcebucket.s3.bitiful.net/img/dm15.webp)" class="imgbox" onclick="changeBg('url(https://sourcebucket.s3.bitiful.net/img/dm15.webp)')"></a>
         <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://sourcebucket.s3.bitiful.net/img/dm2.webp)" class="imgbox" onclick="changeBg('url(https://sourcebucket.s3.bitiful.net/img/dm2.webp)')"></a>
@@ -160,7 +166,7 @@ function createWinbox() {
         <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://sourcebucket.s3.bitiful.net/img/dm11.webp)" class="imgbox" onclick="changeBg('url(https://sourcebucket.s3.bitiful.net/img/dm11.webp)')"></a>
         <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://sourcebucket.s3.bitiful.net/img/dm12.webp)" class="imgbox" onclick="changeBg('url(https://sourcebucket.s3.bitiful.net/img/dm12.webp)')"></a>
       </div>
-    </div>
+    </div>  
   </details>
   
 
@@ -169,7 +175,7 @@ function createWinbox() {
     <summary> 查看适配的风景</summary>
     <div class="content">
       <div class="bgbox">
-        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/you_1.jpg)" class="pimgbox" onclick="changeBg('url(https\://gcore.jsdelivr.net/gh/mikeytki/CDN/you_1.jpg)')"></a>
+        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/you_1.jpg)" class="pimgbox" onclick="changeBg('url(https\://gcore.jsdelivr.net/gh/mikeytki/CDN/you_1.jpg)')"></a>
         <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://sourcebucket.s3.ladydaily.com/img/fj1.webp)" class="imgbox" onclick="changeBg('url(https://sourcebucket.s3.ladydaily.com/img/fj1.webp)')"></a>
       </div>
     </div>
@@ -211,11 +217,11 @@ function createWinbox() {
   <h3>5. 适配手机</h3>
   <details class="folding-tag" cyan="">
     <summary> 查看适配手机背景 </summary>
-    <div class="content">
-      <div class="bgbox">
-        <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://sourcebucket.s3.ladydaily.com/img/mb4.webp)" class="pimgbox" onclick="changeBg('url(https\://sourcebucket.s3.ladydaily.com/img/mb4.webp)')"></a>
+      <div class="content">
+        <div class="bgbox">
+          <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://sourcebucket.s3.ladydaily.com/img/mb4.webp)" class="pimgbox" onclick="changeBg('url(https\://sourcebucket.s3.ladydaily.com/img/mb4.webp)')"></a>
+        </div>
       </div>
-    </div>
   </details>
   
   
@@ -224,12 +230,12 @@ function createWinbox() {
     <summary> 设置自定义背景 </summary>
     <div class="content"><p></p>
       <center>
-        <input type="text" id="pic-link" size="70%" maxlength="1000" placeholder="请输入有效的图片链接，如 https://source.fomal.cc/img/home_bg.webp">
+        <input type="text" id="pic-link" style="background:#c7ebe3" size="70%" maxlength="1000" placeholder="请输入有效的图片链接，如 https://source.fomal.cc/img/home_bg.webp">
       </center>
       <p></p>
       <p></p>
       <center>
-        <button class="winbox_btn" type="button" onclick="getPicture()" style="background:#aff58e;width:35%;padding: 5px 0px 7px 0px;border-radius:30px;color:white;line-height:2;">🌈切换背景🌈</button>
+        <button class="winbox_btn" type="button" onclick="getPicture()" style="background:#c7ebe3;width:35%;padding: 5px 0px 7px 0px;border-radius:30px;color:black;line-height:2;">🌈切换背景🌈</button>
       </center>
       <p></p>
     </div>

@@ -1,7 +1,43 @@
 .loading-img {
-  background: url(https://gcore.jsdelivr.net/gh/mikeytki/CDN/7.png) no-repeat center center;
+  background: url(https://i2.100024.xyz/2023/11/03/ppyc9h.webp) no-repeat center center;
   background-size: cover;
 }
+
+/* styles.css */
+
+.folding-tag summary {
+  display: list-item;
+  background-color: #dcf4fa;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 10px;
+  padding-left: 20px;
+  backdrop-filter: blur(10px); /* 调整模糊程度，单位是像素 */
+  position: relative; /* 使得子元素的定位相对于其父元素 */
+}
+.folding-tag summary::before {
+  content: ''; /* 创建一个伪元素用于添加方框 */
+  position: absolute;
+  top: 48%; /* 垂直居中 */
+  left: 17px; /* 调整左侧边距 */
+  transform: translateY(-50%); /* 使得方框垂直居中 */
+  width: 8px; /* 方框宽度 */
+  height: 8px; /* 方框高度 */
+  border: 2px solid #333; /* 方框的颜色和边框宽度 */
+  border-radius: 10%; /* 使得方框呈圆形 */
+  background-color: #fff; /* 方框的背景色，可以根据需要调整 */
+}
+.folding-tag .content {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  border: 1px solid #ebe2e2;
+  padding: 8px;
+  text-align: left;
+  background-color: #f7fcfc;
+  border-radius: 10px;
+}
+
 /* 页脚与头图透明 */
 #footer {
   background: transparent !important;
@@ -32,7 +68,7 @@
   /* 字体文件地址(相对或者绝对路径都可以) */
   src: url('https://gcore.jsdelivr.net/gh/mikeytki/CDN/ZhuZiAWan.ttf');
   /* 定义加粗样式(加粗多少) */
-  font-weight: normal;
+  font-weight: 700;
   /* 定义字体样式(斜体/非斜体) */
   font-style: normal;
   /* 定义显示样式 */
@@ -154,8 +190,8 @@ div#archive {
 
 /* 图标 */
 svg.icon {
-  width: 1em; 
-  height: 1em;
+  width: 1.3em; 
+  height: 1.3em;
   /* width和height定义图标的默认宽度和高度*/
   vertical-align: -0.15em;
   fill: currentColor;
@@ -494,7 +530,7 @@ animation: light_5px 10s linear infinite;
 
 
 
-/* 标题增强 */
+/* 导航栏start标题增强 */
 #site-name::before {
   opacity: 0;
   background-color: #4fc8ce !important;
@@ -544,7 +580,7 @@ animation: light_5px 10s linear infinite;
   -ms-transition: none!important;
   transition: none!important;
 }
-
+/*end*/
 
 
 
@@ -1213,7 +1249,6 @@ input[name="colors"] {
   background-color: var(--color-blackgray);
 }
 /* end */
-
 
 /*  风车start   */
 /* 文章页H1-H6图标样式效果 */
