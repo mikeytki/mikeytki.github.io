@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://mikeytki.github.io/Gallery/index.html</loc>
+    
+    <lastmod>2024-06-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://mikeytki.github.io/posts/b132932.html</loc>
+    
+    <lastmod>2024-06-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://mikeytki.github.io/posts/a02eb088.html</loc>
     
     <lastmod>2024-06-07</lastmod>
@@ -66,15 +84,6 @@
   
   <url>
     <loc>http://mikeytki.github.io/posts/69809daf.html</loc>
-    
-    <lastmod>2024-06-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://mikeytki.github.io/posts/b132932.html</loc>
     
     <lastmod>2024-06-05</lastmod>
     
@@ -180,13 +189,6 @@
   </url>
   
   <url>
-    <loc>http://mikeytki.github.io/tags/%E7%BD%91%E5%B7%A5/</loc>
-    <lastmod>2024-06-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://mikeytki.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2024-06-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -208,7 +210,21 @@
   </url>
   
   <url>
+    <loc>http://mikeytki.github.io/tags/hexo/</loc>
+    <lastmod>2024-06-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://mikeytki.github.io/tags/%E6%90%AD%E5%BB%BA/</loc>
+    <lastmod>2024-06-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://mikeytki.github.io/tags/%E7%BD%91%E5%B7%A5/</loc>
     <lastmod>2024-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -231,13 +247,6 @@
   </url>
   
   <url>
-    <loc>http://mikeytki.github.io/categories/%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B/</loc>
-    <lastmod>2024-06-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://mikeytki.github.io/categories/web/</loc>
     <lastmod>2024-06-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -253,6 +262,20 @@
   
   <url>
     <loc>http://mikeytki.github.io/categories/hexo/</loc>
+    <lastmod>2024-06-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://mikeytki.github.io/categories/butterfly/</loc>
+    <lastmod>2024-06-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://mikeytki.github.io/categories/%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B/</loc>
     <lastmod>2024-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
