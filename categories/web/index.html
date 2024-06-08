@@ -42,13 +42,12 @@
   
 
   <!-- Include Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" media="defer" onload="this.media='all'">
    
 <!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
 <style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
   white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
-<!-- hexo injector head_end end --></head>
-<body>
+<!-- hexo injector head_end end --></head><body>
 
 <div class="l_body s:aa index tech" id="start" layout="undefined" ><aside class="l_left"><div class="leftbar-container">
 
@@ -154,8 +153,8 @@
         }
         show_runtime();
 </script>
-
-  <link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/mikeytki/CDN@main/css/APlayer.min.css"><!--我的APlayer的样式https://gcore.jsdelivr.net/gh/mikeytki/CDN@main/css/APlayer.min.css || https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css-->
+  <link rel="stylesheet" href="https://jsd.cdn.zzko.cn/gh/mikeytki/CDN/css/ZT.css" media="defer" onload="this.media='all'">
+  <link rel="stylesheet" href="https://jsd.cdn.zzko.cn/gh/mikeytki/CDN@main/css/3APlayer.min.css" media="defer" onload="this.media='all'"> <!--我的APlayer的样式https://gcore.jsdelivr.net/gh/mikeytki/CDN@main/css/APlayer.min.css || https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css-->
   <script src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js"></script><!--APlayer的依赖-->
   <script src="https://unpkg.com/meting@2/dist/Meting.min.js"></script><!--Meting的依赖-->
     <meting-js
@@ -167,7 +166,7 @@
       id="4926587734" 
       theme="#ad7a86">
     </meting-js>
-  <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+  <script async src="https://gcore.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
   <script src="https://cdn.bootcss.com/jquery.pjax/1.9.6/jquery.pjax.min.js"></script>
   <script>
     ap = null
@@ -208,13 +207,7 @@
         }
     };
 </script>
-
-<!-- dark-->
-<script>
-  if (window.localStorage.getItem('ZYI_Theme_Mode')==='dark' || (window.localStorage.getItem('ZYI_Theme_Mode')==='Moss' && window.matchMedia('(prefers-color-scheme: dark)').matches)){
-      document.querySelector("html").id = "ZYDark";
-  }
-</script><div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
 </aside><div class='float-panel blur'>
   <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
@@ -574,8 +567,6 @@
 <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
 <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
 <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"onload="renderMathInElement(document.body);"></script>
-<link rel="stylesheet" href="https://jsd.cdn.zzko.cn/gh/mikeytki/CDN/css/ZT.css" media="defer" onload="this.media='all'">
-<script async src="https://gcore.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
 <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/mermaid@v9/dist/mermaid.min.js"></script>
 <script>
   window.addEventListener('DOMContentLoaded', (event) => {
