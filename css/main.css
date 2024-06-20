@@ -4800,6 +4800,7 @@ details.toc[open] >div.body section .header+.doc_tree {
 .widget-wrapper.toc {
   background: var(--site-bg);
   z-index: 3;
+  border-radius: 10px;
 }
 .widget-wrapper.toc .widget-body {
   position: relative;
@@ -4820,6 +4821,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   margin: 0;
   position: relative;
   list-style: none;
+  border-radius: 10px;
 }
 .widget-wrapper.toc .toc li {
   margin: 0;
