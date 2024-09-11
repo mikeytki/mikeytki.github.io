@@ -6,7 +6,7 @@
   <link href="http://mikeytki.github.io/atom.xml" rel="self"/>
   
   <link href="http://mikeytki.github.io/"/>
-  <updated>2024-06-20T08:51:52.912Z</updated>
+  <updated>2024-09-11T05:44:29.221Z</updated>
   <id>http://mikeytki.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://mikeytki.github.io/posts/e53fe72/"/>
     <id>http://mikeytki.github.io/posts/e53fe72/</id>
     <published>2024-06-18T07:49:42.000Z</published>
-    <updated>2024-06-20T08:51:52.912Z</updated>
+    <updated>2024-09-11T05:44:29.221Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>PicGo: 一个用于快速上传图片并获取图片 URL 链接的工具<br>支持如下图床：七牛图床、腾讯云、又拍云、GitHub、SM.MS、阿里云、Imgur<br>图片上传+管理新体验，支持macOS,Windows,Linux</p><span id="more"></span><h3 id="1-新建github仓库"><a href="#1、新建GitHub仓库" class="headerlink" title="1、新建GitHub仓库"></a>1、新建GitHub仓库</h3><ul><li>创建New repository<div class="tag-plugin gallery flow-box" size="mix" ratio="square"><div class="flow-cell"><img data-fancybox="gallery-1" src="https://cdn.jsdmirror.com/gh/mikeytki/CDN@main/img/20240620085808.png"><div class="image-meta"></div></div></div></li><li>填写仓库信息，<mark class="tag-plugin colorful mark" color="error">Repository name</mark>自命名，仓库设置为<mark class="tag-plugin colorful mark" color="error">Public</mark><span class="tag-plugin emoji"><img no-lazy class="inline" src="https://gcore.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs/ablobcatattentionreverse.png"></span></li></ul><h3 id="2-创建token"><a href="#2、创建token" class="headerlink" title="2、创建token"></a>2、创建token</h3><ul><li>或者直接点击链接(<a href="https://github.com/settings/tokens/new">https://github.com/settings/tokens/new</a>)</li><li>点击头像进入<mark class="tag-plugin colorful mark" color="error">Settings</mark> -&gt; <mark class="tag-plugin colorful mark" color="error">Developer settings</mark> -&gt; <mark class="tag-plugin colorful mark" color="error">Personal access tokens</mark> -&gt; <mark class="tag-plugin colorful mark" color="error">Tokens(classic)</mark><br>-&gt; <mark class="tag-plugin colorful mark" color="error">Generate new tokens(classic)</mark></li><li>勾选repo，note自命名，点击Generate token</li><li><mark class="tag-plugin colorful mark" color="error">token只出现一次，记得保存</mark><div class="tag-plugin gallery flow-box" size="mix" ratio="square"><div class="flow-cell"><img data-fancybox="gallery-2" src="https://gcore.jsdelivr.net/gh/mikeytki/CDN@main/img/20240620104730.png"><div class="image-meta"></div></div></div></li></ul><h3 id="3-下载picgo"><a href="#3、下载PicGo" class="headerlink" title="3、下载PicGo"></a>3、下载PicGo</h3><ul><li>下载链接(<a href="https://github.com/Molunerfinn/PicGo/releases">https://github.com/Molunerfinn/PicGo/releases</a>)</li><li>配置GitHub图床设置</li><li>图床配置名：自命名</li><li>仓库名： 用户名&#x2F;仓库名</li><li>分支：main</li><li>域名格式：<mark class="tag-plugin colorful mark" color="error">https://gcore.jsdelivr.net/gh/用户名/仓库名@分支</mark><div class="tag-plugin gallery flow-box" size="mix" ratio="square"><div class="flow-cell"><img data-fancybox="gallery-3" src="https://gcore.jsdelivr.net/gh/mikeytki/CDN@main/img/20240620164359.png"><div class="image-meta"></div></div></div></li></ul><h3 id="4-开始使用"><a href="#4、开始使用" class="headerlink" title="4、开始使用"></a>4、开始使用</h3><ul><li>上传区上传图片</li></ul>]]></content>
     

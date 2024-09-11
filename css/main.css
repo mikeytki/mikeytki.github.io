@@ -731,6 +731,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   scroll-padding-top: 8px;
+  scroll-behavior: smooth;
 }
 body {
   background: var(--site-bg);
@@ -5908,28 +5909,6 @@ table a:not([class]):has(img):hover {
 }
 .md-text .aplayer {
   border-radius: 12px;
-}
-img.lazy {
-  transition: all 0.75s ease-out;
-  -moz-transition: all 0.75s ease-out;
-  -webkit-transition: all 0.75s ease-out;
-  -o-transition: all 0.75s ease-out;
-}
-img.lazy:not(.loaded) {
-  opacity: 0;
-}
-img.lazy.loaded,
-img.lazy.error {
-  opacity: 1;
-}
-img.lazy:not(.loaded) {
-  filter: blur(50px);
-  -webkit-filter: blur(50px);
-}
-img.lazy.loaded,
-img.lazy.error {
-  filter: none;
-  -webkit-filter: none;
 }
 :root {
   --swiper-theme-color: #1cd0fd !important;
