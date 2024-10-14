@@ -22,6 +22,8 @@
             
             <tag> 网络工程 </tag>
             
+            <tag> 计算机网络 </tag>
+            
             <tag> 综合实验 </tag>
             
             <tag> 大型企业网 </tag>
@@ -37,7 +39,7 @@
       <link href="/posts/a134e589/"/>
       <url>/posts/a134e589/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>TCP&#x2F;IP 三次握手是建立可靠的网络连接的过程，确保通信双方能够成功进行数据传输。它是基于 TCP（传输控制协议） 的连接机制，在客户端和服务器之间创建可靠的、双向通信的通道。</p><span id="more"></span><h3 id="为什么需要三次握手"><a href="#为什么需要三次握手？" class="headerlink" title="为什么需要三次握手？"></a>为什么需要三次握手？</h3><ol><li>TCP是一个面向连接的协议，保证数据在传输过程中不丢失且顺序正确。在传输数据之前，通信双方需要确认彼此的接收能力和发送能力，并同步初始序列号，确保后续数据的传输能够可靠且有序进行。</li></ol><h3 id="三次握手的过程"><a href="#三次握手的过程" class="headerlink" title="三次握手的过程"></a>三次握手的过程</h3><div class="tag-plugin gallery flow-box" size="mix" ratio="square"><div class="flow-cell"><img data-fancybox="gallery-4" src="https://gcore.jsdelivr.net/gh/mikeytki/CDN@main/img/20241008101628.png"><div class="image-meta"></div></div></div><h5 id="第一次握手客户端发送-syn-请求"><a href="#第一次握手：客户端发送-SYN-请求" class="headerlink" title="第一次握手：客户端发送 SYN 请求"></a>第一次握手：客户端发送 SYN 请求</h5><p>目的：客户端尝试与服务器建立连接，发送 SYN（Synchronize Sequence Number） 请求，告诉服务器“我想要与你建立连接”。<br>操作：<br>客户端生成一个 初始序列号（ISN, Initial Sequence Number），标识即将发送的数据包序列。<br>SYN 包中包含该序列号。<br>状态变化：<br>客户端进入 SYN-SENT 状态，等待服务器回应。</p><h5 id="第二次握手服务器发送-syn-ack"><a href="#第二次握手：服务器发送-SYN-ACK" class="headerlink" title="第二次握手：服务器发送 SYN-ACK"></a>第二次握手：服务器发送 SYN-ACK</h5><p>目的：服务器收到客户端的 SYN 请求后，同意建立连接，向客户端发送 SYN-ACK 数据包，确认收到请求并愿意开始通信。<br>操作：<br>服务器生成自己的 初始序列号，同时确认收到客户端的 SYN（即 ACK 客户端的序列号 + 1，表示已经接收）。<br>发送一个包含 SYN 和 ACK 标志的数据包，表示服务器同意建立连接，并向客户端回应。<br>状态变化：<br>服务器进入 SYN-RECEIVED 状态，等待客户端确认。</p><h5 id="第三次握手客户端发送-ack-确认"><a href="#第三次握手：客户端发送-ACK-确认" class="headerlink" title="第三次握手：客户端发送 ACK 确认"></a>第三次握手：客户端发送 ACK 确认</h5><p>目的：客户端收到服务器的 SYN-ACK 后，确认连接请求有效，发送 ACK（Acknowledgment） 确认数据包，告诉服务器已经收到其回应，连接可以正式建立。<br>操作：<br>客户端将服务器的序列号加1，作为ACK的确认号，表示收到服务器的SYN。<br>发送 ACK 包，确认建立连接。<br>状态变化：<br>客户端进入 ESTABLISHED（连接建立）状态，服务器收到 ACK 后也进入 ESTABLISHED 状态，双方连接建立完成。</p><h3 id="为什么是三次握手"><a href="#为什么是三次握手？" class="headerlink" title="为什么是三次握手？"></a>为什么是三次握手？</h3><p>第一次握手：客户端通过 SYN 包通知服务器自己想建立连接。<br>第二次握手：服务器回应 SYN-ACK，确认收到了客户端的请求，并附带自己的初始序列号。这个过程确保服务器知道客户端的存在。<br>第三次握手：客户端确认服务器的回应有效，发送 ACK 确认包。至此，客户端和服务器的初始序列号都得到了确认，连接正式建立。</p><h3 id="举例说明三次握手"><a href="#举例说明三次握手" class="headerlink" title="举例说明三次握手"></a>举例说明三次握手</h3><p>可以把三次握手想象成一个电话交谈的开头：</p><p>第一次握手（客户端呼叫）：你拨打了一个电话，听到电话响（发送 SYN），等待对方接听。<br>第二次握手（服务器回应）：对方接听并说：“你好，听得到吗？”（发送 SYN-ACK，表示接收请求，并希望确认你能听到）。<br>第三次握手（客户端确认）：你回应：“听到了，现在可以开始说话了。”（发送 ACK，确认对方的消息并准备进行正式通信）。</p><h3 id="tcp三次握手的目的"><a href="#TCP三次握手的目的" class="headerlink" title="TCP三次握手的目的"></a>TCP三次握手的目的</h3><p>可靠连接：通过三次握手，通信双方明确知道彼此的存在，并且可以开始发送和接收数据。<br>同步序列号：三次握手的过程中，双方交换初始序列号，确保后续数据传输的有序性和可靠性。</p><h3 id="可能的问题"><a href="#可能的问题" class="headerlink" title="可能的问题"></a>可能的问题</h3><p>半连接状态：如果客户端发送 SYN 请求，但服务器没有收到 ACK 确认，则服务器会保持在半连接状态，等待客户端的响应。为防止这种情况，服务器通常会设置一个超时机制，等待一定时间后关闭该连接。<br>通过三次握手，TCP确保了通信的可靠性和双向确认，避免了数据包的丢失或乱序问题。</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>TCP&#x2F;IP 三次握手是建立可靠的网络连接的过程，确保通信双方能够成功进行数据传输。它是基于 TCP（传输控制协议） 的连接机制，在客户端和服务器之间创建可靠的、双向通信的通道。</p><span id="more"></span><h4 id="为什么需要三次握手"><a href="#为什么需要三次握手？" class="headerlink" title="为什么需要三次握手？"></a>为什么需要三次握手？</h4><ol><li>TCP是一个面向连接的协议，保证数据在传输过程中不丢失且顺序正确。在传输数据之前，通信双方需要确认彼此的接收能力和发送能力，并同步初始序列号，确保后续数据的传输能够可靠且有序进行。</li></ol><h4 id="三次握手的过程"><a href="#三次握手的过程" class="headerlink" title="三次握手的过程"></a>三次握手的过程</h4><div class="tag-plugin gallery flow-box" size="mix" ratio="square"><div class="flow-cell"><img data-fancybox="gallery-4" src="https://gcore.jsdelivr.net/gh/mikeytki/CDN@main/img/20241008101628.png"><div class="image-meta"></div></div></div><h5 id="第一次握手客户端发送-syn-请求"><a href="#第一次握手：客户端发送-SYN-请求" class="headerlink" title="第一次握手：客户端发送 SYN 请求"></a>第一次握手：客户端发送 SYN 请求</h5><p>目的：客户端尝试与服务器建立连接，发送 SYN（Synchronize Sequence Number） 请求，告诉服务器“我想要与你建立连接”。<br>操作：<br>客户端生成一个 初始序列号（ISN, Initial Sequence Number），标识即将发送的数据包序列。<br>SYN 包中包含该序列号。<br>状态变化：<br>客户端进入 SYN-SENT 状态，等待服务器回应。</p><h5 id="第二次握手服务器发送-syn-ack"><a href="#第二次握手：服务器发送-SYN-ACK" class="headerlink" title="第二次握手：服务器发送 SYN-ACK"></a>第二次握手：服务器发送 SYN-ACK</h5><p>目的：服务器收到客户端的 SYN 请求后，同意建立连接，向客户端发送 SYN-ACK 数据包，确认收到请求并愿意开始通信。<br>操作：<br>服务器生成自己的 初始序列号，同时确认收到客户端的 SYN（即 ACK 客户端的序列号 + 1，表示已经接收）。<br>发送一个包含 SYN 和 ACK 标志的数据包，表示服务器同意建立连接，并向客户端回应。<br>状态变化：<br>服务器进入 SYN-RECEIVED 状态，等待客户端确认。</p><h5 id="第三次握手客户端发送-ack-确认"><a href="#第三次握手：客户端发送-ACK-确认" class="headerlink" title="第三次握手：客户端发送 ACK 确认"></a>第三次握手：客户端发送 ACK 确认</h5><p>目的：客户端收到服务器的 SYN-ACK 后，确认连接请求有效，发送 ACK（Acknowledgment） 确认数据包，告诉服务器已经收到其回应，连接可以正式建立。<br>操作：<br>客户端将服务器的序列号加1，作为ACK的确认号，表示收到服务器的SYN。<br>发送 ACK 包，确认建立连接。<br>状态变化：<br>客户端进入 ESTABLISHED（连接建立）状态，服务器收到 ACK 后也进入 ESTABLISHED 状态，双方连接建立完成。</p><h4 id="为什么是三次握手"><a href="#为什么是三次握手？" class="headerlink" title="为什么是三次握手？"></a>为什么是三次握手？</h4><p>第一次握手：客户端通过 SYN 包通知服务器自己想建立连接。<br>第二次握手：服务器回应 SYN-ACK，确认收到了客户端的请求，并附带自己的初始序列号。这个过程确保服务器知道客户端的存在。<br>第三次握手：客户端确认服务器的回应有效，发送 ACK 确认包。至此，客户端和服务器的初始序列号都得到了确认，连接正式建立。</p><h4 id="举例说明三次握手"><a href="#举例说明三次握手" class="headerlink" title="举例说明三次握手"></a>举例说明三次握手</h4><p>可以把三次握手想象成一个电话交谈的开头：</p><p>第一次握手（客户端呼叫）：你拨打了一个电话，听到电话响（发送 SYN），等待对方接听。<br>第二次握手（服务器回应）：对方接听并说：“你好，听得到吗？”（发送 SYN-ACK，表示接收请求，并希望确认你能听到）。<br>第三次握手（客户端确认）：你回应：“听到了，现在可以开始说话了。”（发送 ACK，确认对方的消息并准备进行正式通信）。</p><h4 id="tcp三次握手的目的"><a href="#TCP三次握手的目的" class="headerlink" title="TCP三次握手的目的"></a>TCP三次握手的目的</h4><p>可靠连接：通过三次握手，通信双方明确知道彼此的存在，并且可以开始发送和接收数据。<br>同步序列号：三次握手的过程中，双方交换初始序列号，确保后续数据传输的有序性和可靠性。</p><h4 id="可能的问题"><a href="#可能的问题" class="headerlink" title="可能的问题"></a>可能的问题</h4><p>半连接状态：如果客户端发送 SYN 请求，但服务器没有收到 ACK 确认，则服务器会保持在半连接状态，等待客户端的响应。为防止这种情况，服务器通常会设置一个超时机制，等待一定时间后关闭该连接。<br>通过三次握手，TCP确保了通信的可靠性和双向确认，避免了数据包的丢失或乱序问题。</p>]]></content>
       
       
       <categories>
@@ -52,6 +54,10 @@
             <tag> 网络工程 </tag>
             
             <tag> TCP/IP </tag>
+            
+            <tag> 计算机网络 </tag>
+            
+            <tag> 面试重点 </tag>
             
         </tags>
       
@@ -77,6 +83,10 @@
         <tags>
             
             <tag> 网络工程 </tag>
+            
+            <tag> 草稿 </tag>
+            
+            <tag> 随记 </tag>
             
         </tags>
       
@@ -127,6 +137,10 @@
         <tags>
             
             <tag> stellar </tag>
+            
+            <tag> music </tag>
+            
+            <tag> blog </tag>
             
         </tags>
       
@@ -428,6 +442,12 @@
         <tags>
             
             <tag> 算法 </tag>
+            
+            <tag> 面试题 </tag>
+            
+            <tag> C </tag>
+            
+            <tag> python </tag>
             
         </tags>
       
