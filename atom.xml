@@ -35,11 +35,11 @@
     
     <category term="网络工程" scheme="http://mikeytki.github.io/tags/%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B/"/>
     
+    <category term="计算机网络" scheme="http://mikeytki.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
     <category term="综合实验" scheme="http://mikeytki.github.io/tags/%E7%BB%BC%E5%90%88%E5%AE%9E%E9%AA%8C/"/>
     
     <category term="大型企业网" scheme="http://mikeytki.github.io/tags/%E5%A4%A7%E5%9E%8B%E4%BC%81%E4%B8%9A%E7%BD%91/"/>
-    
-    <category term="计算机网络" scheme="http://mikeytki.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
@@ -62,9 +62,9 @@
     
     <category term="网络工程" scheme="http://mikeytki.github.io/tags/%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B/"/>
     
-    <category term="计算机网络" scheme="http://mikeytki.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
     <category term="TCP/IP" scheme="http://mikeytki.github.io/tags/TCP-IP/"/>
+    
+    <category term="计算机网络" scheme="http://mikeytki.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
     <category term="面试重点" scheme="http://mikeytki.github.io/tags/%E9%9D%A2%E8%AF%95%E9%87%8D%E7%82%B9/"/>
     
