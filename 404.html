@@ -149,6 +149,7 @@
   <link rel="stylesheet" href="https://cdn.jsdmirror.com/gh/mikeytki/CDN/css/ZT.css" media="defer" onload="this.media='all'">
   <!-- <link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css" media="defer" onload="this.media='all'"> 我的APlayer的样式https://gcore.jsdelivr.net/gh/mikeytki/CDN@main/css/APlayer.min.css || https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css -->
   <!-- <script src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js"></script>  APlayer的依赖-->
+  
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"> <!--APlayer的样式 -->
   <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
@@ -170,6 +171,13 @@
             lrc:'https://gcore.jsdelivr.net/gh/mikeytki/CDN@main/img/REALLY%20REALLY.lrc'
           }, 
           {
+            title: '诺言',
+            author:'鹿晗',
+            url:'https://gcore.jsdelivr.net/gh/mikeytki/CDN@main/img/诺言-鹿晗.mp3',
+            pic:'https://y.qq.com/music/photo_new/T002R300x300M000000MGbCx0EUuMk_1.jpg?max_age=2592000',
+            lrc:''
+          },
+          {
             title: '我不好',
             author:'张艺兴',
             url:'https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/我不好-张艺兴.mp3',
@@ -181,30 +189,35 @@
             author: '周杰伦',
             url: 'https://echeverra.cn/wp-content/uploads/2022/05/周杰伦-半岛铁盒.mp3',
             pic: 'https://echeverra.cn/wp-content/uploads/2022/05/周杰伦-半岛铁盒-mp3-image.png',
+            lrc:''
           },
           {
             title: '晴天',
             author: '周杰伦',
             url: 'https://cdn.jsdmirror.com/gh/mikeytki/CDN/img/晴天-周杰伦.mp3',
             pic: 'https://y.qq.com/music/photo_new/T002R300x300M000000MkMni19ClKG_5.jpg?max_age=2592000',
+            lrc: ''
           },
           {
             title: '七里香',
             author: '周杰伦',
             url: 'https://gcore.jsdelivr.net/gh/mikeytki/CDN@main/img/七里香-周杰伦.mp3',
             pic: 'https://y.qq.com/music/photo_new/T002R300x300M000003DFRzD192KKD_1.jpg?max_age=2592000',
+            lrc: ''
           },
           {
             title: '给我一首歌的时间',
             author: '周杰伦',
             url: 'https://echeverra.cn/wp-content/uploads/2021/06/周杰伦-给我一首歌的时间.mp3',
             pic: 'https://echeverra.cn/wp-content/uploads/2021/06/周杰伦-给我一首歌的时间-mp3-image.png',
+            lrc: ''
           },
           {
             title: '发如雪',
             author:'周杰伦',
             url:'https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/发如雪-周杰伦.mp3',
-            pic:'https://echeverra.cn/wp-content/static/jayChou/2005-11月的萧邦/xb.jpg'
+            pic:'https://echeverra.cn/wp-content/static/jayChou/2005-11月的萧邦/xb.jpg',
+            lrc: 'https://npm.elemecdn.com/anzhiyu-music@1.0.3/发如雪/发如雪.lrc'
           },
           {
             title: 'leave me alone.mp3',
@@ -228,20 +241,7 @@
         ]
     });
     ap.init();
-  </script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> Meting的依赖 -->
-    <!-- <meting-js
-      server="netease"
-      type="playlist"
-      autoplay=false 
-      lrc-type=1
-      fixed=true
-      id="4926587734" 
-      theme="#ad7a86">
-  </meting-js> -->
-<!--   <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://cdn.bootcss.com/jquery.pjax/1.9.6/jquery.pjax.min.js"></script>
-
+    
 ap = null
 Object.defineProperty(document.querySelector('meting-js'),"aplayer",{
     set: function(aplayer) {
@@ -280,6 +280,19 @@ window.onbeforeunload = function(event) {
     }
 };
 </script>
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> Meting的依赖 -->
+    <!-- <meting-js
+      server="netease"
+      type="playlist"
+      autoplay=false 
+      lrc-type=1
+      fixed=true
+      id="4926587734" 
+      theme="#ad7a86">
+  </meting-js> -->
+<!--   <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery.pjax/1.9.6/jquery.pjax.min.js"></script>
 -->
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
 </aside><div class='float-panel blur'>
@@ -618,6 +631,9 @@ window.onbeforeunload = function(event) {
     }
   });
 </script>
+
+<script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script>  
+<script src="https://cdn.jsdmirror.com/gh/mikeytki/CDN/js/txmap2.js"></script>
 <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
 <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
 <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"onload="renderMathInElement(document.body);"></script>
