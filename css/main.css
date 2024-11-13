@@ -79,6 +79,66 @@
   background-color: rgba(200,155,155,0);
   border-radius: 2em;
 }
+.welcome-box {
+  background: var(--card-background);
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+}
+.welcome-text {
+  font-size: 1.1em;
+  margin-bottom: 12px;
+}
+.highlight {
+  color: var(--theme-color);
+  font-weight: bold;
+}
+.cute-emoji {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+.roll-button {
+  background: #f0f0f0;
+  padding: 8px;
+  border-radius: 8px;
+  margin: 12px 0;
+  cursor: pointer;
+}
+.warning-box {
+  background: #e8f4ff;
+  color: #3498db;
+  padding: 8px;
+  border-radius: 8px;
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.warning-icon {
+  font-size: 1.2em;
+}
+.blog-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding: 12px;
+  background: #fff;
+  border-radius: 8px;
+}
+.stats-item {
+  text-align: center;
+}
+.stats-title {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 4px;
+}
+.stats-value {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #333;
+}
 @-moz-keyframes heartbeat {
   0%, 25%, 50%, 75%, 100% {
     transform: scale(1);
