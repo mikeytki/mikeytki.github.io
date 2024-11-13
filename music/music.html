@@ -271,6 +271,72 @@
         audio {
             display: none;
         }
+
+        /* 移动端适配样式 */
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                height: auto;
+                padding: 10px;
+                gap: 15px;
+            }
+
+            .playlist {
+                flex: none;
+                max-height: 30vh;
+            }
+
+            .player {
+                flex: none;
+            }
+
+            .now-playing {
+                flex-direction: column;
+                gap: 15px;
+                padding: 10px;
+            }
+
+            .cover-art {
+                width: 150px;
+                height: 150px;
+            }
+
+            .track-info {
+                text-align: center;
+            }
+
+            .current-title {
+                font-size: 20px;
+            }
+
+            .current-artist {
+                font-size: 16px;
+            }
+
+            .lyrics {
+                max-height: 25vh;
+                padding: 10px;
+            }
+
+            .player-controls {
+                padding: 15px;
+                margin-top: 30px;
+            }
+
+            .control-buttons {
+                gap: 15px;
+            }
+
+            .control-button {
+                width: 35px;
+                height: 35px;
+            }
+
+            .control-button.play-pause {
+                width: 45px;
+                height: 45px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -536,38 +602,11 @@
             
             // 自动播放第一首歌
             playSong(0);  // 传入索引0，播放第一首歌
-        });
 
-        // 添加上一首/下一首功能
-        function playPrev() {
-            let prevIndex = currentSongIndex - 1;
-            if (prevIndex < 0) {
-                prevIndex = songs.length - 1;  // 循环到最后一首
-            }
-            playSong(prevIndex);
-        }
+            // 添加触摸事件支持
+            let touchStartX = 0;
+            let touchStartTime = 0;
 
-        function playNext() {
-            let nextIndex = currentSongIndex + 1;
-            if (nextIndex >= songs.length) {
-                nextIndex = 0;  // 循环到第一首
-            }
-            playSong(nextIndex);
-        }
-
-        // 绑定上一首/下一首按钮事件
-        document.querySelector('.prev').addEventListener('click', playPrev);
-        document.querySelector('.next').addEventListener('click', playNext);
-
-        // 当歌曲播放结束时自动播放下一首
-        document.getElementById('audio-player').addEventListener('ended', playNext);
-
-        // 添加控制逻辑
-        document.addEventListener('DOMContentLoaded', function() {
-            const audio = document.getElementById('audio-player');
-            const playPauseBtn = document.querySelector('.play-pause');
-            const prevBtn = document.querySelector('.prev');
-            const nextBtn = document.querySelector('.next');
             const progressWrapper = document.querySelector('.progress-wrapper');
             const progressCurrent = document.querySelector('.progress-current');
             const progressHandle = document.querySelector('.progress-handle');
@@ -674,7 +713,88 @@
                 // 更新音频播放位置
                 audio.currentTime = percent * audio.duration;
             }
+
+            // 添加触摸事件支持
+            progressWrapper.addEventListener('touchstart', function(e) {
+                touchStartX = e.touches[0].clientX;
+                touchStartTime = audio.currentTime;
+                isDragging = true;
+                updateProgressBarTouch(e);
+            });
+
+            progressWrapper.addEventListener('touchmove', function(e) {
+                if (isDragging) {
+                    e.preventDefault();
+                    updateProgressBarTouch(e);
+                }
+            });
+
+            progressWrapper.addEventListener('touchend', function() {
+                isDragging = false;
+            });
+
+            // 触摸版进度条更新函数
+            function updateProgressBarTouch(e) {
+                const rect = progressWrapper.getBoundingClientRect();
+                let percent = (e.touches[0].clientX - rect.left) / rect.width;
+                percent = Math.max(0, Math.min(1, percent));
+                
+                progressCurrent.style.width = `${percent * 100}%`;
+                progressHandle.style.left = `${percent * 100}%`;
+                
+                audio.currentTime = percent * audio.duration;
+            }
+
+            // 添加移动端滑动切换歌曲功能
+            let touchStartY = 0;
+            const container = document.querySelector('.container');
+
+            container.addEventListener('touchstart', function(e) {
+                touchStartX = e.touches[0].clientX;
+                touchStartY = e.touches[0].clientY;
+            });
+
+            container.addEventListener('touchend', function(e) {
+                const touchEndX = e.changedTouches[0].clientX;
+                const touchEndY = e.changedTouches[0].clientY;
+                
+                const deltaX = touchEndX - touchStartX;
+                const deltaY = Math.abs(touchEndY - touchStartY);
+                
+                // 确保是水平滑动而不是垂直滑动
+                if (Math.abs(deltaX) > 50 && deltaY < 50) {
+                    if (deltaX > 0) {
+                        playPrev();
+                    } else {
+                        playNext();
+                    }
+                }
+            });
         });
+
+        // 添加上一首/下一首功能
+        function playPrev() {
+            let prevIndex = currentSongIndex - 1;
+            if (prevIndex < 0) {
+                prevIndex = songs.length - 1;  // 循环到最后一首
+            }
+            playSong(prevIndex);
+        }
+
+        function playNext() {
+            let nextIndex = currentSongIndex + 1;
+            if (nextIndex >= songs.length) {
+                nextIndex = 0;  // 循环到第一首
+            }
+            playSong(nextIndex);
+        }
+
+        // 绑定上一首/下一首按钮事件
+        document.querySelector('.prev').addEventListener('click', playPrev);
+        document.querySelector('.next').addEventListener('click', playNext);
+
+        // 当歌曲播放结束时自动播放下一首
+        document.getElementById('audio-player').addEventListener('ended', playNext);
     </script>
 </body>
 </html>
