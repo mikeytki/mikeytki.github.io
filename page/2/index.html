@@ -256,8 +256,46 @@
 -->
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
 <div class="widgets">
-<widget class="widget-wrapper markdown"><div class="widget-header dis-select"><span class="name">访客信息</span></div><div class="widget-body fs14"><div id="welcome-info" style="font-size: 0.9em; padding: 6px 0;"></div>
-<script defer="true" src="/js/welcome.js"></script>
+<widget class="widget-wrapper markdown"><div class="widget-header dis-select"><span class="name">访客信息</span></div><div class="widget-body fs14"><div style="font-size: 0.9rem;">
+  
+<p>  👋 欢迎来访！</p>
+<p>  📍 您当前位于: <span id="userLocation">正在获取…</span></p>
+<p>  🌐 IP地址: <span id="userIP">正在获取…</span></p>
+<p>  🕒 当前时间: <span id="currentTime"></span></p>
+</div>
+
+<script>
+  // 获取并显示访客IP和位置信息
+  fetch('https://api.ipify.org?format=json')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('userIP').textContent = data.ip;
+      return fetch(`https://ipapi.co/${data.ip}/json/`);
+    })
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('userLocation').textContent = `${data.country_name}, ${data.city}`;
+    })
+    .catch(error => {
+      document.getElementById('userIP').textContent = '无法获取';
+      document.getElementById('userLocation').textContent = '无法获取';
+    });
+
+  // 更新当前时间
+  function updateTime() {
+    const now = new Date();
+    const timeStr = now.toLocaleTimeString('zh-CN', { 
+      hour12: false,
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit'
+    });
+    document.getElementById('currentTime').textContent = timeStr;
+  }
+  
+  updateTime();
+  setInterval(updateTime, 1000);
+</script>
 </div></widget>
 </div></aside><div class='float-panel blur'>
   <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>

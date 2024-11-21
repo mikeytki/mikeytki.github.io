@@ -6,6 +6,13 @@
     <link rel="icon" href="https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/music.png" type="image/png">
     <link rel="stylesheet" href="https://cdn.jsdmirror.com/gh/mikeytki/CDN/css/ZT.css" media="defer" onload="this.media='all'">
     <title>Music Player</title>
+    <!-- 添加验证检查脚本
+    <script>
+        // 检查是否已经通过验证
+        if (!sessionStorage.getItem('authenticated')) {
+            window.location.href = '/music/password.html';  // 确保路径正确
+        }
+    </script> -->
     <style>
         body {
             margin: 0;
@@ -148,7 +155,7 @@
             padding: 20px;
             margin: 10px 0;
             text-align: center;
-            max-height: calc(100% - 100px);  /* 减小最大高度，给进度条留更多空间 */
+            max-height: calc(100% - 80px);  /* 减小最大高度，给进度条留更多空间 */
         }
 
         .lyric-line {
@@ -165,8 +172,8 @@
         }
 
         .player-controls {
-            padding: 30px 30px;  /* 增加上下padding */
-            margin-top: 70px;    /* 增加与歌词的间距 */
+            padding: 10px 10px;  /* 增加上下padding */
+            margin-top: 0px;    /* 增加与歌词的间距 */
             position: relative;
             bottom: 0;
             width: 100%;
@@ -344,7 +351,7 @@
                 artist: '周杰伦',
                 url: 'https://echeverra.cn/wp-content/uploads/2022/05/周杰伦-半岛铁盒.mp3',
                 cover: 'https://echeverra.cn/wp-content/uploads/2022/05/周杰伦-半岛铁盒-mp3-image.png',
-                lyrics: ''
+                lyrics: 'https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/半岛铁盒-周杰伦.lrc'
             },
             {
                 number: 5,
@@ -352,7 +359,7 @@
                 artist: '周杰伦',
                 url: 'https://cdn.jsdmirror.com/gh/mikeytki/CDN/img/晴天-周杰伦.mp3',
                 cover: 'https://y.qq.com/music/photo_new/T002R300x300M000000MkMni19ClKG_5.jpg?max_age=2592000',
-                lyrics: ''
+                lyrics: 'https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/晴天-周杰伦.lrc'
             },
             {
                 number: 6,
@@ -360,7 +367,7 @@
                 artist: '周杰伦',
                 url: 'https://gcore.jsdelivr.net/gh/mikeytki/CDN@main/img/七里香-周杰伦.mp3',
                 cover: 'https://y.qq.com/music/photo_new/T002R300x300M000003DFRzD192KKD_1.jpg?max_age=2592000',
-                lyrics: ''
+                lyrics: 'https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/七里香-周杰伦.lrc'
             },
             {
                 number: 7,
@@ -368,7 +375,7 @@
                 artist: '周杰伦',
                 url: 'https://echeverra.cn/wp-content/uploads/2021/06/周杰伦-给我一首歌的时间.mp3',
                 cover: 'https://echeverra.cn/wp-content/uploads/2021/06/周杰伦-给我一首歌的时间-mp3-image.png',
-                lyrics: ''
+                lyrics: 'https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/给我一首歌的时间-周杰伦.lrc'
             },
             {
                 number: 8,
@@ -384,7 +391,7 @@
                 artist: 'TC',
                 url: 'https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/leave%20me%20alone.mp3',
                 cover: 'https://p1.music.126.net/ut3ej8hjxACnIzanHch1AQ==/109951165562501951.jpg?param=130y130',
-                lyrics: 'https://gcore.jsdelivr.net/gh/mikeytki/CDN@main/lyrics/leave-me-alone-TC.lrc'
+                lyrics: 'https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/leave-me-alone-TC.lrc'
             },
             {
                 number: 10,
@@ -409,6 +416,38 @@
                 url: 'https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/Love_U2.mp3',
                 cover: 'https://y.qq.com/music/photo_new/T002R300x300M000002gSRRI3Ue1fL_1.jpg?max_age=2592000',
                 lyrics: 'https://gcore.jsdelivr.net/gh/mikeytki/CDN@main/img/Love_U2.lrc'
+            },
+            {
+                number: 13,
+                title: 'For You',
+                artist: 'AZU',
+                url: 'https://gcore.jsdelivr.net/gh/mikeytki/CDN@main/img/For%20You-AZU.mp3',
+                cover: 'https://y.qq.com/music/photo_new/T002R180x180M000001CczYM1PrYPs_1.jpg?max_age=2592000',
+                lyrics: 'https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/For-You-AZU.lrc'
+            },
+            {
+                number: 14,
+                title: 'U can do it !',
+                artist: 'DOMINO',
+                url: 'https://gcore.jsdelivr.net/gh/mikeytki/CDN@main/img/U%20can%20do%20it%20!-DOMINO.mp3',
+                cover: 'https://y.qq.com/music/photo_new/T002R300x300M000003Bn6pq1kjnfJ_1.jpg?max_age=2592000',
+                lyrics: 'https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/U-can-do-it-DOMINO.lrc'
+            },
+            {
+                number: 15,
+                title: '君の待つ世界 (你所等待的世界)',
+                artist: 'LAGOON',
+                url: 'https://gcore.jsdelivr.net/gh/mikeytki/CDN@main/img/%E5%90%9B%E3%81%AE%E5%BE%85%E3%81%A4%E4%B8%96%E7%95%8C%20(%E4%BD%A0%E6%89%80%E7%AD%89%E5%BE%85%E7%9A%84%E4%B8%96%E7%95%8C)-LAGOON.mp3',
+                cover: 'https://y.qq.com/music/photo_new/T002R300x300M000004RjXBL16FBBZ_1.jpg?max_age=2592000',
+                lyrics: 'https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/%E5%90%9B%E3%81%AE%E5%BE%85%E3%81%A4%E4%B8%96%E7%95%8C%20(%E4%BD%A0%E6%89%80%E7%AD%89%E5%BE%85%E7%9A%84%E4%B8%96%E7%95%8C)-LAGOON.lrc'
+            },
+            {
+                number: 16,
+                title: 'Baby Can I',
+                artist: 'Bumkey',
+                url: 'https://gcore.jsdelivr.net/gh/mikeytki/CDN@main/img/Baby%20Can%20I.mp3',
+                cover: 'http://p2.music.126.net/tc9GvCQa6T5bq8dEOziUVQ==/109951169727212098.jpg?param=130y130',
+                lyrics: 'https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/Baby%20Can%20I.lrc'
             }
         ];
 
@@ -529,13 +568,47 @@
             });
         }
 
-        // 在页面加载完成后自动播放第一首歌
+        // 修改页面加载完成后的处理
         document.addEventListener('DOMContentLoaded', function() {
             // 初始化播放列表
             createPlaylist();
             
-            // 自动播放第一首歌
-            playSong(0);  // 传入索引0，播放第一首歌
+            // 加载第一首歌的信息，但不自动播放
+            const firstSong = songs[0];
+            
+            // 更新背景
+            const background = document.querySelector('.background');
+            background.style.backgroundImage = `url(${firstSong.cover})`;
+            
+            // 更新封面和信息
+            document.getElementById('currentCover').src = firstSong.cover;
+            document.getElementById('currentTitle').textContent = firstSong.title;
+            document.getElementById('currentArtist').textContent = firstSong.artist;
+            
+            // 设置音频源但不播放
+            const audioPlayer = document.getElementById('audio-player');
+            audioPlayer.src = firstSong.url;
+            
+            // 更新列表选中状态
+            document.querySelector('.song-item').classList.add('active');
+            
+            // 加载歌词
+            if (firstSong.lyrics) {
+                fetch(firstSong.lyrics)
+                    .then(response => response.text())
+                    .then(text => {
+                        window.parsedLyrics = parseLRC(text);
+                        updateLyrics(window.parsedLyrics);
+                    })
+                    .catch(error => {
+                        console.error('加载歌词失败:', error);
+                        window.parsedLyrics = [];
+                        updateLyrics([{ text: '暂无歌词' }]);
+                    });
+            } else {
+                window.parsedLyrics = [];
+                updateLyrics([{ text: '暂无歌词' }]);
+            }
         });
 
         // 添加上一首/下一首功能
