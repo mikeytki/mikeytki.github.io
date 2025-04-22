@@ -31,14 +31,14 @@
 <meta property="article:published_time" content="2024-10-12T07:19:14.000Z">
 <meta property="article:modified_time" content="2024-11-09T08:10:43.213Z">
 <meta property="article:author" content="Mikey">
+<meta property="article:tag" content="笔记">
 <meta property="article:tag" content="网络工程">
 <meta property="article:tag" content="基础">
-<meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/mikeytki/CDN@main/img/image.png">
   
   
-  <meta name="keywords" content="网络工程,基础,笔记">
+  <meta name="keywords" content="笔记,网络工程,基础">
   <!-- feed -->
   
     <link rel="alternate" href="/atom.xml" title="MiKey" type="application/atom+xml">
@@ -78,7 +78,7 @@
 
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/posts/e115566c/"><span class="title">网络工程基础</span></a><a class="item title" href="/posts/2ecfdbae/"><span class="title">随记</span></a><a class="item title" href="/posts/e0f9c34e/"><span class="title">企业网络规划设计与构建</span></a><a class="item title" href="/posts/a02eb088/"><span class="title">hexo-stellar全局音乐</span></a><a class="item title" href="/posts/4a17b156/"><span class="title">Interview</span></a><a class="item title" href="/posts/a134e589/"><span class="title">三次握手</span></a><a class="item title" href="/posts/ef627937/"><span class="title">14天</span></a><a class="item title" href="/posts/ad452784/"><span class="title">eNSP路由器启动时一直显示#号</span></a><a class="item title" href="/posts/e8d2c75a/"><span class="title">Mac彻底清除pycharm</span></a><a class="item title" href="/posts/e53fe72/"><span class="title">Github+PicGo图床</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/posts/b1ad0e26/"><span class="title">Linux shell</span></a><a class="item title" href="/posts/e115566c/"><span class="title">网络工程基础</span></a><a class="item title" href="/posts/2ecfdbae/"><span class="title">随记</span></a><a class="item title" href="/posts/e0f9c34e/"><span class="title">企业网络规划设计与构建</span></a><a class="item title" href="/posts/a02eb088/"><span class="title">hexo-stellar全局音乐</span></a><a class="item title" href="/posts/4a17b156/"><span class="title">Interview</span></a><a class="item title" href="/posts/a134e589/"><span class="title">三次握手</span></a><a class="item title" href="/posts/ef627937/"><span class="title">14天</span></a><a class="item title" href="/posts/ad452784/"><span class="title">eNSP路由器启动时一直显示#号</span></a><a class="item title" href="/posts/e8d2c75a/"><span class="title">Mac彻底清除pycharm</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -104,7 +104,7 @@
   </div>
   </div><article class="md-text content"><p>网络工程师负责设计、部署和维护计算机网络系统，包括交换机、路由器配置，TCP&#x2F;IP、DNS等协议的掌握，以及网络安全。他们需具备良好沟通和问题解决能力，理解网络拓扑、负载均衡、高可用性及云计算等领域知识。</p>
 <span id="more"></span>
-<h1 id="网络工程"><a href="#网络工程" class="headerlink" title="网络工程"></a>网络工程</h1><h1 id="数据封装"><a href="#数据封装" class="headerlink" title="数据封装"></a>数据封装</h1><div class="tag-plugin gallery flow-box" size="mix" ratio="square"><div class="flow-cell"><img data-fancybox="gallery-6" src="https://gcore.jsdelivr.net/gh/mikeytki/CDN@main/img/image.png" alt="image.png"><div class="image-meta"><span class="image-caption">image.png</span></div></div></div>
+<h1 id="网络工程"><a href="#网络工程" class="headerlink" title="网络工程"></a>网络工程</h1><h1 id="数据封装"><a href="#数据封装" class="headerlink" title="数据封装"></a>数据封装</h1><div class="tag-plugin gallery flow-box" size="mix" ratio="square"><div class="flow-cell"><img data-fancybox="gallery-5" src="https://gcore.jsdelivr.net/gh/mikeytki/CDN@main/img/image.png" alt="image.png"><div class="image-meta"><span class="image-caption">image.png</span></div></div></div>
 <p>应用数据需要经过TCP&#x2F;IP每一层处理之后才能通过网络传输到目的端，每一层上都使用该层的协议数据单元PDU（Protocol Data Unit）彼此交换信息。不同层的PDU中包含有不同的信息，因此PDU在不同层被赋予了不同的名称。<br>如上层数据在传输层添加TCP报头后得到的PDU被称为<mark class="tag-plugin colorful mark" color="error">Segment(数据段)</mark>；<br>数据段被传递给网络层，网络层添加IP报头得到的PDU被称为<mark class="tag-plugin colorful mark" color="error">Packet(数据包)</mark>；<br>数据包被传递到数据链路层，封装数据链路层报头和尾部得到PDU被称为<mark class="tag-plugin colorful mark" color="error">Frame(数据帧)</mark>；<br>最后，帧在物理层被转换为比特，通过网络介质传输。<br>这种协议栈逐层向下传递数据，并添加报头和报尾的过程称为封装。</p>
 <hr>
 <table>
@@ -170,7 +170,7 @@
 </li>
 </ul>
 <h3 id="ip地址子网划分"><a href="#IP地址子网划分" class="headerlink" title="IP地址子网划分"></a>IP地址子网划分</h3><p><a target="_blank" rel="noopener" href="https://www.notion.so/IP-122e249f089e80f7ae55c9917652859a?pvs=21">IP地址子网划分</a></p>
-<h3 id="icmp"><a href="#ICMP" class="headerlink" title="ICMP"></a>ICMP</h3><div class="tag-plugin gallery flow-box" size="mix" ratio="square"><div class="flow-cell"><img data-fancybox="gallery-7" src="https://gcore.jsdelivr.net/gh/mikeytki/CDN@main/img/image%202.png" alt="image.png"><div class="image-meta"><span class="image-caption">image.png</span></div></div></div>
+<h3 id="icmp"><a href="#ICMP" class="headerlink" title="ICMP"></a>ICMP</h3><div class="tag-plugin gallery flow-box" size="mix" ratio="square"><div class="flow-cell"><img data-fancybox="gallery-6" src="https://gcore.jsdelivr.net/gh/mikeytki/CDN@main/img/image%202.png" alt="image.png"><div class="image-meta"><span class="image-caption">image.png</span></div></div></div>
 <p>什么是ICMP？</p>
 <ul>
 <li>Internet控制消息协议ICMP (Internet Control Message Protocol)是IP协议的辅助协议。</li>
@@ -235,7 +235,7 @@
 <div class="article-footer fs14">
     <section id="license">
       <div class="header"><span>许可协议</span></div>
-      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。<center>主域名：<br><a target="_blank" rel="noopener" href="https://mikeytk.cn"><b><font color="#a591e0">mikeytk.cn</font></b></a><br>📬：<b><font color="#a591e0"><a href="mailto:&#55;&#x30;&#52;&#53;&#x39;&#x36;&#x31;&#x34;&#49;&#x40;&#113;&#113;&#46;&#99;&#x6f;&#x6d;">&#55;&#x30;&#52;&#53;&#x39;&#x36;&#x31;&#x34;&#49;&#x40;&#113;&#113;&#46;&#99;&#x6f;&#x6d;</a></font></b></a></center></p>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。<center>主域名：<br><a target="_blank" rel="noopener" href="https://mikeytk.cn"><b><font color="#a591e0">mikeytk.cn</font></b></a><br>📬：<b><font color="#a591e0"><a href="mailto:&#55;&#48;&#x34;&#x35;&#57;&#x36;&#49;&#52;&#x31;&#x40;&#113;&#113;&#46;&#99;&#x6f;&#x6d;">&#55;&#48;&#x34;&#x35;&#57;&#x36;&#49;&#52;&#x31;&#x40;&#113;&#113;&#46;&#99;&#x6f;&#x6d;</a></font></b></a></center></p>
 </div>
     </section>
     
@@ -253,14 +253,14 @@
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/e0f9c34e/">企业网络规划设计与构建</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/posts/b1ad0e26/">Linux shell</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/e0f9c34e/">企业网络规划设计与构建</a></div></section></div>
 
 <div class="related-wrap" id="related-posts">
     <section class='header'>
       <div class='title cap theme'>您可能感兴趣的文章</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="/posts/ad452784/" title="eNSP路由器启动时一直显示#号"><span class="title">eNSP路由器启动时一直显示#号</span></a><a class="item" href="/posts/a134e589/" title="三次握手"><span class="title">三次握手</span><span class="excerpt">TCP&#x2F;IP 三次握手是建立可靠的网络连接的过程，确保通信双方能够成功进行数据传输。它是基于 TCP（传输控制协议） 的连接机制，在客户端和服务器之间创建可靠的、双向通信的通道。</span></a><a class="item" href="/posts/e0f9c34e/" title="企业网络规划设计与构建"><span class="title">企业网络规划设计与构建</span><span class="excerpt">基于eNSP中大型校园&#x2F;企业网络规划与设计_综合大作业</span></a><a class="item" href="/posts/69809daf/" title="MAC地址学习"><span class="title">MAC地址学习</span><span class="excerpt">交换机主要用于在同一局域网（LAN）内连接多个设备（如计算机、打印机等）。它通过MAC地址表来识别和转发数据帧，使得数据只发送到目标设备，而不是网络中的所有设备，从而提高了网络效率和安全性。</span></a></div></section></div>
+    <div class="related-posts"><a class="item" href="/posts/b1ad0e26/" title="Linux shell"><span class="title">Linux shell</span></a><a class="item" href="/posts/ad452784/" title="eNSP路由器启动时一直显示#号"><span class="title">eNSP路由器启动时一直显示#号</span></a><a class="item" href="/posts/a134e589/" title="三次握手"><span class="title">三次握手</span><span class="excerpt">TCP&#x2F;IP 三次握手是建立可靠的网络连接的过程，确保通信双方能够成功进行数据传输。它是基于 TCP（传输控制协议） 的连接机制，在客户端和服务器之间创建可靠的、双向通信的通道。</span></a><a class="item" href="/posts/e0f9c34e/" title="企业网络规划设计与构建"><span class="title">企业网络规划设计与构建</span><span class="excerpt">基于eNSP中大型校园&#x2F;企业网络规划与设计_综合大作业</span></a><a class="item" href="/posts/69809daf/" title="MAC地址学习"><span class="title">MAC地址学习</span><span class="excerpt">交换机主要用于在同一局域网（LAN）内连接多个设备（如计算机、打印机等）。它通过MAC地址表来识别和转发数据帧，使得数据只发送到目标设备，而不是网络中的所有设备，从而提高了网络效率和安全性。</span></a></div></section></div>
 
 
 

