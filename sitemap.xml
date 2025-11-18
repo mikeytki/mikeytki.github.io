@@ -263,14 +263,14 @@
 
   
   <url>
-    <loc>http://mikeytki.github.io/tags/%E5%9B%BE%E5%BA%8A/</loc>
+    <loc>http://mikeytki.github.io/tags/web/</loc>
     <lastmod>2025-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mikeytki.github.io/tags/web/</loc>
+    <loc>http://mikeytki.github.io/tags/%E5%9B%BE%E5%BA%8A/</loc>
     <lastmod>2025-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -292,6 +292,13 @@
   
   <url>
     <loc>http://mikeytki.github.io/tags/%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://mikeytki.github.io/tags/%E7%BD%91%E5%B7%A5/</loc>
     <lastmod>2025-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -320,13 +327,6 @@
   
   <url>
     <loc>http://mikeytki.github.io/tags/python/</loc>
-    <lastmod>2025-11-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://mikeytki.github.io/tags/%E7%BD%91%E5%B7%A5/</loc>
     <lastmod>2025-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -362,6 +362,13 @@
   
   <url>
     <loc>http://mikeytki.github.io/tags/blog/</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://mikeytki.github.io/tags/hexo/</loc>
     <lastmod>2025-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -410,13 +417,6 @@
   </url>
   
   <url>
-    <loc>http://mikeytki.github.io/tags/hexo/</loc>
-    <lastmod>2025-11-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://mikeytki.github.io/tags/pycharm/</loc>
     <lastmod>2025-11-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -447,14 +447,14 @@
 
   
   <url>
-    <loc>http://mikeytki.github.io/categories/PicGo/</loc>
+    <loc>http://mikeytki.github.io/categories/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/</loc>
     <lastmod>2025-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mikeytki.github.io/categories/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/</loc>
+    <loc>http://mikeytki.github.io/categories/PicGo/</loc>
     <lastmod>2025-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

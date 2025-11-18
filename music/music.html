@@ -15,6 +15,19 @@
         }
     </script> -->
     <style>
+        .playlist.hidden { display: none; }
+
+        .controls-toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 6px;
+        }
+
+        .controls-toolbar .play-mode,
+        .controls-toolbar .playlist-toggle { cursor: pointer; }
         .track-actions {
             display: flex;
             gap: 15px;
@@ -326,6 +339,25 @@
         audio {
             display: none;
         }
+
+        @media (max-width: 768px) {
+            .container { flex-direction: column; height: auto; padding: 12px; }
+            .now-playing { flex-direction: column; gap: 16px; padding: 12px; }
+            .cover-art { width: 140px; height: 140px; }
+            .current-title { font-size: 20px; }
+            .current-artist { font-size: 14px; }
+            .lyrics { height: 40vh; max-height: none; font-size: 13px; }
+            .progress-wrapper { height: 6px; }
+            .control-button { width: 44px; height: 44px; }
+            .control-button.play-pause { width: 56px; height: 56px; }
+            .volume-control { position: relative; right: auto; bottom: auto; margin-top: 10px; justify-content: center; }
+            .background { filter: blur(20px) brightness(0.6); }
+        }
+
+        @media (max-width: 480px) {
+            .cover-art { width: 120px; height: 120px; }
+            .track-actions { display: none; }
+        }
     </style>
 </head>
 <body>
@@ -342,11 +374,7 @@
                 <div class="track-info">
                     <div class="current-title" id="currentTitle"></div>
                     <div class="current-artist" id="currentArtist"></div>
-                    <div class="track-actions">
-                        <button class="action-button like" aria-label="喜欢"><i class="fas fa-heart"></i></button>
-                        <button class="action-button download" aria-label="下载"><i class="fas fa-download"></i></button>
-                        <button class="action-button share" aria-label="分享"><i class="fas fa-share-alt"></i></button>
-                    </div>
+                   
                 </div>
             </div>
             <div class="lyrics" id="lyrics">
@@ -362,7 +390,10 @@
                     </div>
                     <div class="time total-time">00:00</div>
                 </div>
-                <div class="play-mode" aria-label="播放模式"><i class="fas fa-list"></i></div>
+                <div class="controls-toolbar">
+                    <div class="play-mode" aria-label="播放模式"><i class="fas fa-list"></i></div>
+                    <div class="playlist-toggle" aria-label="隐藏播放列表"><i class="fas fa-chevron-left"></i></div>
+                </div>
                 <div class="control-buttons">
                     <button class="control-button prev" aria-label="上一首"><i class="fas fa-step-backward"></i></button>
                     <button class="control-button play-pause" aria-label="播放"><i class="fas fa-play"></i></button>
@@ -729,6 +760,8 @@
             const volumeHandle = document.querySelector('.volume-handle');
             const volumeIcon = document.querySelector('.volume-icon');
             const playMode = document.querySelector('.play-mode');
+            const playlistToggle = document.querySelector('.playlist-toggle');
+            const playlistEl = document.querySelector('.playlist');
 
             // 格式化时间
             function formatTime(seconds) {
@@ -894,6 +927,20 @@
                         break;
                 }
             });
+
+            playlistToggle.addEventListener('click', function() {
+                const isHidden = playlistEl.classList.toggle('hidden');
+                if (isHidden) {
+                    playlistToggle.innerHTML = '<i class="fas fa-list"></i>';
+                } else {
+                    playlistToggle.innerHTML = '<i class="fas fa-chevron-left"></i>';
+                }
+            });
+
+            if (window.innerWidth <= 768) {
+                playlistEl.classList.add('hidden');
+                playlistToggle.innerHTML = '<i class="fas fa-list"></i>';
+            }
         });
     </script>
 </body>
