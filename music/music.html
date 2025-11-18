@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/music.png" type="image/png">
     <link rel="stylesheet" href="https://cdn.jsdmirror.com/gh/mikeytki/CDN/css/ZT.css" media="defer" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Music Player</title>
     <!-- 添加验证检查脚本
     <script>
@@ -14,6 +15,33 @@
         }
     </script> -->
     <style>
+        .track-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .action-button {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .action-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        :root {
+            --primary-color: #31c27c;
+            --primary-hover: #2ca772;
+        }
         body {
             margin: 0;
             padding: 0;
@@ -63,6 +91,26 @@
             flex: 2;
             padding: 17px;
             overflow-y: auto;
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .playlist-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .playlist-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .playlist-count {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 14px;
         }
 
         .song-item {
@@ -218,7 +266,7 @@
             top: 0;
             height: 100%;
             border-radius: 2px;
-            background: #1db954;
+            background: var(--primary-color);
             width: 0%;
         }
 
@@ -267,11 +315,11 @@
         .control-button.play-pause {
             width: 50px;
             height: 50px;
-            background: #1db954;
+            background: var(--primary-color);
         }
 
         .control-button.play-pause:hover {
-            background: #1ed760;
+            background: var(--primary-hover);
             transform: scale(1.05);
         }
 
@@ -294,6 +342,11 @@
                 <div class="track-info">
                     <div class="current-title" id="currentTitle"></div>
                     <div class="current-artist" id="currentArtist"></div>
+                    <div class="track-actions">
+                        <button class="action-button like" aria-label="喜欢"><i class="fas fa-heart"></i></button>
+                        <button class="action-button download" aria-label="下载"><i class="fas fa-download"></i></button>
+                        <button class="action-button share" aria-label="分享"><i class="fas fa-share-alt"></i></button>
+                    </div>
                 </div>
             </div>
             <div class="lyrics" id="lyrics">
@@ -309,10 +362,18 @@
                     </div>
                     <div class="time total-time">00:00</div>
                 </div>
+                <div class="play-mode" aria-label="播放模式"><i class="fas fa-list"></i></div>
                 <div class="control-buttons">
-                    <button class="control-button prev">⏮</button>
-                    <button class="control-button play-pause">▶</button>
-                    <button class="control-button next">⏭</button>
+                    <button class="control-button prev" aria-label="上一首"><i class="fas fa-step-backward"></i></button>
+                    <button class="control-button play-pause" aria-label="播放"><i class="fas fa-play"></i></button>
+                    <button class="control-button next" aria-label="下一首"><i class="fas fa-step-forward"></i></button>
+                </div>
+                <div class="volume-control">
+                    <div class="volume-icon" aria-label="音量"><i class="fas fa-volume-up"></i></div>
+                    <div class="volume-slider">
+                        <div class="volume-level"></div>
+                        <div class="volume-handle"></div>
+                    </div>
                 </div>
                 <audio id="audio-player"></audio>
             </div>
@@ -349,8 +410,8 @@
                 number: 4,
                 title: '半岛铁盒',
                 artist: '周杰伦',
-                url: 'https://echeverra.cn/wp-content/uploads/2022/05/周杰伦-半岛铁盒.mp3',
-                cover: 'https://echeverra.cn/wp-content/uploads/2022/05/周杰伦-半岛铁盒-mp3-image.png',
+                url: 'https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/半岛铁盒.mp3',
+                cover: 'https://y.qq.com/music/photo_new/T002R300x300M000004MGitN0zEHpb_3.jpg?max_age=2592000',
                 lyrics: 'https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/半岛铁盒-周杰伦.lrc'
             },
             {
@@ -365,7 +426,7 @@
                 number: 6,
                 title: '七里香',
                 artist: '周杰伦',
-                url: 'https://gcore.jsdelivr.net/gh/mikeytki/CDN@main/img/七里香-周杰伦.mp3',
+                url: 'https://cdn.jsdmirror.com/gh/mikeytki/CDN/img/七里香-周杰伦.mp3',
                 cover: 'https://y.qq.com/music/photo_new/T002R300x300M000003DFRzD192KKD_1.jpg?max_age=2592000',
                 lyrics: 'https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/七里香-周杰伦.lrc'
             },
@@ -373,23 +434,23 @@
                 number: 7,
                 title: '给我一首歌的时间',
                 artist: '周杰伦',
-                url: 'https://echeverra.cn/wp-content/uploads/2021/06/周杰伦-给我一首歌的时间.mp3',
-                cover: 'https://echeverra.cn/wp-content/uploads/2021/06/周杰伦-给我一首歌的时间-mp3-image.png',
+                url: 'https://cdn.jsdmirror.com/gh/mikeytki/CDN/img/给我一首歌的时间-周杰伦.mp3',
+                cover: 'https://y.qq.com/music/photo_new/T002R300x300M000002Neh8l0uciQZ_3.jpg?max_age=2592000',
                 lyrics: 'https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/给我一首歌的时间-周杰伦.lrc'
             },
             {
                 number: 8,
                 title: '发如雪',
                 artist: '周杰伦',
-                url: 'https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/发如雪-周杰伦.mp3',
-                cover: 'https://echeverra.cn/wp-content/static/jayChou/2005-11月的萧邦/xb.jpg',
+                url: 'https://cdn.jsdmirror.com/gh/mikeytki/CDN/img/发如雪-周杰伦.mp3',
+                cover: 'https://y.qq.com/music/photo_new/T002R300x300M0000024bjiL2aocxT_5.jpg?max_age=2592000',
                 lyrics: 'https://npm.elemecdn.com/anzhiyu-music@1.0.3/发如雪/发如雪.lrc'
             },
             {
                 number: 9,
                 title: 'leave me alone',
                 artist: 'TC',
-                url: 'https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/leave%20me%20alone.mp3',
+                url: 'https://cdn.jsdmirror.com/gh/mikeytki/CDN/img/leave%20me%20alone.mp3',
                 cover: 'https://p1.music.126.net/ut3ej8hjxACnIzanHch1AQ==/109951165562501951.jpg?param=130y130',
                 lyrics: 'https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/leave-me-alone-TC.lrc'
             },
@@ -403,11 +464,11 @@
             },
             {
                 number: 11,
-                title: 'POWER',
-                artist: 'G-DRAGON',
-                url: 'https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/POWER-G-DRAGON.mp3',
-                cover: 'https://y.qq.com/music/photo_new/T002R300x300M000000hlJOJ3987mu_1.jpg?max_age=2592000',
-                lyrics: 'https://gcore.jsdelivr.net/gh/mikeytki/CDN@main/lyrics/POWER-G-DRAGON.lrc'
+                title: '2_soon',
+                artist: 'keshi',
+                url: 'https://cdn.jsdmirror.com/gh/mikeytki/CDN/img/2_soon.mp3',
+                //cover: 'https://y.qq.com/music/photo_new/T002R300x300M000000hlJOJ3987mu_1.jpg?max_age=2592000',
+                lyrics: 'https://cdn.jsdmirror.com/gh/mikeytki/CDN/img/2_soon.lrc'
             },
             {
                 number: 12,
@@ -456,11 +517,20 @@
                 url: 'https://gcore.jsdelivr.net/gh/mikeytki/CDN/img/Falling%20U.mp3',
                 cover: 'https://p1.music.126.net/ma96YO1_ufyloFYZLn1JSg==/109951169159623522.jpg?param=130y130',
                 lyrics: 'http;'
-            }
+            },
+            {
+                number: 18,
+                title: '水（H2O）',
+                artist: '张艺兴',
+                url: 'https://cdn.jsdmirror.com/gh/mikeytki/CDN/img/水.mp3',
+                cover: 'https://y.qq.com/music/photo_new/T002R300x300M000003XzNlG3eSgRq_3.jpg?max_age=2592000',
+                lyrics: 'http;'
+            }          
         ];
 
         function createPlaylist() {
             const playlist = document.querySelector('.playlist');
+            playlist.innerHTML = '<div class="playlist-header"><div class="playlist-title">播放列表</div><div class="playlist-count">共 <span id="song-count">' + songs.length + '</span> 首</div></div>';
             songs.forEach((song, index) => {
                 const songItem = document.createElement('div');
                 songItem.className = 'song-item';
@@ -476,7 +546,7 @@
             });
         }
 
-        let currentSongIndex = 0;  // 添加全局变量记录当前播放的歌曲索引
+        let currentSongIndex = 0;
 
         function playSong(index) {
             currentSongIndex = index;  // 更新当前播放索引
@@ -497,7 +567,7 @@
             
             audioPlayer.src = song.url;
             audioPlayer.play();
-            playPauseBtn.textContent = '⏸';
+            playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
 
             // 更新列表选中状态
             document.querySelectorAll('.song-item').forEach((item, i) => {
@@ -654,6 +724,11 @@
             const progressHandle = document.querySelector('.progress-handle');
             const currentTimeEl = document.querySelector('.current-time');
             const totalTimeEl = document.querySelector('.total-time');
+            const volumeSlider = document.querySelector('.volume-slider');
+            const volumeLevel = document.querySelector('.volume-level');
+            const volumeHandle = document.querySelector('.volume-handle');
+            const volumeIcon = document.querySelector('.volume-icon');
+            const playMode = document.querySelector('.play-mode');
 
             // 格式化时间
             function formatTime(seconds) {
@@ -685,25 +760,16 @@
                 audio.currentTime = percent * audio.duration;
             });
 
-            // 播放/暂停
             playPauseBtn.addEventListener('click', function() {
                 if (audio.paused) {
                     audio.play();
-                    playPauseBtn.textContent = '⏸';
+                    playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
                 } else {
                     audio.pause();
-                    playPauseBtn.textContent = '▶';
+                    playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
                 }
             });
 
-            // 上一首/下一首按钮逻辑
-            prevBtn.addEventListener('click', () => {
-                // 实现上一首逻辑
-            });
-
-            nextBtn.addEventListener('click', () => {
-                // 实现下一首逻辑
-            });
 
             // 添加拖动功能
             let isDragging = false;
@@ -755,6 +821,79 @@
                 // 更新音频播放位置
                 audio.currentTime = percent * audio.duration;
             }
+            volumeSlider.addEventListener('click', function(e) {
+                const sliderWidth = this.clientWidth;
+                const clickX = e.offsetX;
+                const volumePercent = clickX / sliderWidth;
+                audio.volume = volumePercent;
+                volumeLevel.style.width = (volumePercent * 100) + '%';
+                volumeHandle.style.left = (volumePercent * 100) + '%';
+                updateVolumeIcon(volumePercent);
+            });
+
+            volumeIcon.addEventListener('click', function() {
+                if (audio.volume > 0) {
+                    audio.dataset.lastVolume = audio.volume;
+                    audio.volume = 0;
+                    volumeLevel.style.width = '0%';
+                    volumeHandle.style.left = '0%';
+                    volumeIcon.innerHTML = '<i class="fas fa-volume-mute"></i>';
+                } else {
+                    const lastVolume = audio.dataset.lastVolume || 0.7;
+                    audio.volume = lastVolume;
+                    volumeLevel.style.width = (lastVolume * 100) + '%';
+                    volumeHandle.style.left = (lastVolume * 100) + '%';
+                    updateVolumeIcon(lastVolume);
+                }
+            });
+
+            function updateVolumeIcon(volume) {
+                if (volume === 0) {
+                    volumeIcon.innerHTML = '<i class="fas fa-volume-mute"></i>';
+                } else if (volume < 0.5) {
+                    volumeIcon.innerHTML = '<i class="fas fa-volume-down"></i>';
+                } else {
+                    volumeIcon.innerHTML = '<i class="fas fa-volume-up"></i>';
+                }
+            }
+
+            audio.volume = 0.7;
+            volumeLevel.style.width = '70%';
+            volumeHandle.style.left = '70%';
+
+            let playModeState = 'list';
+            playMode.addEventListener('click', function() {
+                switch(playModeState) {
+                    case 'list':
+                        playModeState = 'random';
+                        playMode.innerHTML = '<i class="fas fa-random"></i>';
+                        break;
+                    case 'random':
+                        playModeState = 'single';
+                        playMode.innerHTML = '<i class="fas fa-redo-alt"></i>';
+                        break;
+                    case 'single':
+                        playModeState = 'list';
+                        playMode.innerHTML = '<i class="fas fa-list"></i>';
+                        break;
+                }
+            });
+
+            audio.removeEventListener('ended', playNext);
+            audio.addEventListener('ended', function() {
+                switch(playModeState) {
+                    case 'list':
+                        playNext();
+                        break;
+                    case 'random':
+                        const randomIndex = Math.floor(Math.random() * songs.length);
+                        playSong(randomIndex);
+                        break;
+                    case 'single':
+                        playSong(currentSongIndex);
+                        break;
+                }
+            });
         });
     </script>
 </body>
