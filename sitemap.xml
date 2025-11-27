@@ -291,21 +291,7 @@
   </url>
   
   <url>
-    <loc>http://mikeytki.github.io/tags/%E7%BD%91%E5%B7%A5/</loc>
-    <lastmod>2025-11-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://mikeytki.github.io/tags/%E5%9B%BE%E5%BA%8A/</loc>
-    <lastmod>2025-11-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://mikeytki.github.io/tags/%E8%BD%AF%E4%BB%B6/</loc>
     <lastmod>2025-11-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -334,6 +320,20 @@
   
   <url>
     <loc>http://mikeytki.github.io/tags/python/</loc>
+    <lastmod>2025-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://mikeytki.github.io/tags/%E7%BD%91%E5%B7%A5/</loc>
+    <lastmod>2025-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://mikeytki.github.io/tags/%E8%BD%AF%E4%BB%B6/</loc>
     <lastmod>2025-11-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -461,14 +461,14 @@
   </url>
   
   <url>
-    <loc>http://mikeytki.github.io/categories/%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B/</loc>
+    <loc>http://mikeytki.github.io/categories/PicGo/</loc>
     <lastmod>2025-11-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://mikeytki.github.io/categories/PicGo/</loc>
+    <loc>http://mikeytki.github.io/categories/%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B/</loc>
     <lastmod>2025-11-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
