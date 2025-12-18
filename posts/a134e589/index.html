@@ -30,14 +30,14 @@
 <meta property="article:modified_time" content="2024-10-14T09:23:03.531Z">
 <meta property="article:author" content="Mikey">
 <meta property="article:tag" content="网络工程">
-<meta property="article:tag" content="TCP&#x2F;IP">
 <meta property="article:tag" content="计算机网络">
+<meta property="article:tag" content="TCP&#x2F;IP">
 <meta property="article:tag" content="面试重点">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/mikeytki/CDN@main/img/20241008101628.png">
   
   
-  <meta name="keywords" content="网络工程,TCP/IP,计算机网络,面试重点">
+  <meta name="keywords" content="网络工程,计算机网络,TCP/IP,面试重点">
   <!-- feed -->
   
     <link rel="alternate" href="/atom.xml" title="MiKey" type="application/atom+xml">
@@ -107,7 +107,7 @@
 <h4 id="为什么需要三次握手"><a href="#为什么需要三次握手？" class="headerlink" title="为什么需要三次握手？"></a>为什么需要三次握手？</h4><ol>
 <li>TCP是一个面向连接的协议，保证数据在传输过程中不丢失且顺序正确。在传输数据之前，通信双方需要确认彼此的接收能力和发送能力，并同步初始序列号，确保后续数据的传输能够可靠且有序进行。</li>
 </ol>
-<h4 id="三次握手的过程"><a href="#三次握手的过程" class="headerlink" title="三次握手的过程"></a>三次握手的过程</h4><div class="tag-plugin gallery flow-box" size="mix" ratio="square"><div class="flow-cell"><img data-fancybox="gallery-4" src="https://gcore.jsdelivr.net/gh/mikeytki/CDN@main/img/20241008101628.png"><div class="image-meta"></div></div></div>
+<h4 id="三次握手的过程"><a href="#三次握手的过程" class="headerlink" title="三次握手的过程"></a>三次握手的过程</h4><div class="tag-plugin gallery flow-box" size="mix" ratio="square"><div class="flow-cell"><img data-fancybox="gallery-7" src="https://gcore.jsdelivr.net/gh/mikeytki/CDN@main/img/20241008101628.png"><div class="image-meta"></div></div></div>
 <h5 id="第一次握手客户端发送-syn-请求"><a href="#第一次握手：客户端发送-SYN-请求" class="headerlink" title="第一次握手：客户端发送 SYN 请求"></a>第一次握手：客户端发送 SYN 请求</h5><p>目的：客户端尝试与服务器建立连接，发送 SYN（Synchronize Sequence Number） 请求，告诉服务器“我想要与你建立连接”。<br>操作：<br>客户端生成一个 初始序列号（ISN, Initial Sequence Number），标识即将发送的数据包序列。<br>SYN 包中包含该序列号。<br>状态变化：<br>客户端进入 SYN-SENT 状态，等待服务器回应。</p>
 <h5 id="第二次握手服务器发送-syn-ack"><a href="#第二次握手：服务器发送-SYN-ACK" class="headerlink" title="第二次握手：服务器发送 SYN-ACK"></a>第二次握手：服务器发送 SYN-ACK</h5><p>目的：服务器收到客户端的 SYN 请求后，同意建立连接，向客户端发送 SYN-ACK 数据包，确认收到请求并愿意开始通信。<br>操作：<br>服务器生成自己的 初始序列号，同时确认收到客户端的 SYN（即 ACK 客户端的序列号 + 1，表示已经接收）。<br>发送一个包含 SYN 和 ACK 标志的数据包，表示服务器同意建立连接，并向客户端回应。<br>状态变化：<br>服务器进入 SYN-RECEIVED 状态，等待客户端确认。</p>
 <h5 id="第三次握手客户端发送-ack-确认"><a href="#第三次握手：客户端发送-ACK-确认" class="headerlink" title="第三次握手：客户端发送 ACK 确认"></a>第三次握手：客户端发送 ACK 确认</h5><p>目的：客户端收到服务器的 SYN-ACK 后，确认连接请求有效，发送 ACK（Acknowledgment） 确认数据包，告诉服务器已经收到其回应，连接可以正式建立。<br>操作：<br>客户端将服务器的序列号加1，作为ACK的确认号，表示收到服务器的SYN。<br>发送 ACK 包，确认建立连接。<br>状态变化：<br>客户端进入 ESTABLISHED（连接建立）状态，服务器收到 ACK 后也进入 ESTABLISHED 状态，双方连接建立完成。</p>
@@ -120,7 +120,7 @@
 <div class="article-footer fs14">
     <section id="license">
       <div class="header"><span>许可协议</span></div>
-      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。<center>主域名：<br><a target="_blank" rel="noopener" href="https://mikeytk.cn"><b><font color="#a591e0">mikeytk.cn</font></b></a><br>📬：<b><font color="#a591e0"><a href="mailto:&#x37;&#48;&#x34;&#x35;&#57;&#x36;&#49;&#52;&#49;&#x40;&#x71;&#113;&#46;&#99;&#x6f;&#109;">&#x37;&#48;&#x34;&#x35;&#57;&#x36;&#49;&#52;&#49;&#x40;&#x71;&#113;&#46;&#99;&#x6f;&#109;</a></font></b></a></center></p>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。<center>主域名：<br><a target="_blank" rel="noopener" href="https://mikeytk.cn"><b><font color="#a591e0">mikeytk.cn</font></b></a><br>📬：<b><font color="#a591e0"><a href="mailto:&#x37;&#48;&#52;&#x35;&#x39;&#x36;&#49;&#x34;&#x31;&#64;&#113;&#113;&#46;&#x63;&#111;&#x6d;">&#x37;&#48;&#52;&#x35;&#x39;&#x36;&#49;&#x34;&#x31;&#64;&#113;&#113;&#46;&#x63;&#111;&#x6d;</a></font></b></a></center></p>
 </div>
     </section>
     
@@ -687,263 +687,4 @@
 
 <!-- inject -->
 
-</div><!-- hexo injector body_end start -->
-    <style>
-      /* --- 悬浮球 (FAB) --- */
-      #cc-fab {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        width: 50px;
-        height: 50px;
-        background: rgba(0, 0, 0, 0.6);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        z-index: 9999;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        border: 1px solid rgba(255,255,255,0.1);
-      }
-      #cc-fab:hover {
-        transform: scale(1.1) rotate(90deg);
-        background: rgba(0, 0, 0, 0.8);
-      }
-      #cc-fab svg {
-        width: 24px;
-        height: 24px;
-        fill: #fff;
-      }
-    
-      /* --- 控制中心面板 (Panel) --- */
-      #cc-panel {
-        position: fixed;
-        bottom: 80px;
-        right: 20px;
-        width: 320px;
-        background: rgba(28, 28, 30, 0.85); /* 深色磨砂黑 */
-        backdrop-filter: blur(25px) saturate(180%);
-        -webkit-backdrop-filter: blur(25px) saturate(180%);
-        border-radius: 24px;
-        padding: 16px;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        z-index: 9998;
-        box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-        border: 1px solid rgba(255,255,255,0.12);
-        
-        /* 动画状态 */
-        opacity: 0;
-        transform: scale(0.9) translateY(20px);
-        transform-origin: bottom right;
-        pointer-events: none;
-        transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-      }
-    
-      /* 激活状态 */
-      #cc-panel.active {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-        pointer-events: all;
-      }
-    
-      /* --- 模块通用样式 --- */
-      .cc-card {
-        background: rgba(255, 255, 255, 0.08);
-        border-radius: 16px;
-        padding: 12px;
-        border: 1px solid rgba(255,255,255,0.05);
-      }
-    
-      /* 1. 音乐模块 */
-      .cc-music {
-        min-height: 80px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-      }
-      /* 强制覆盖 APlayer 样式使其透明嵌入 */
-      .cc-music .aplayer {
-        margin: 0 !important;
-        width: 100%;
-        background: transparent !important;
-        box-shadow: none !important;
-      }
-      .cc-music .aplayer .aplayer-body {
-        background: transparent !important;
-      }
-      .cc-music .aplayer-info {
-        border: none !important;
-      }
-      .cc-music .aplayer-title, .cc-music .aplayer-author {
-        color: #fff !important;
-      }
-    
-      /* 2. 性能监控模块 */
-      .cc-monitor {
-        display: flex;
-        justify-content: space-between;
-        gap: 10px;
-      }
-      .cc-stat {
-        flex: 1;
-        background: rgba(0,0,0,0.2);
-        border-radius: 12px;
-        padding: 10px;
-        text-align: center;
-      }
-      .cc-stat-label {
-        font-size: 10px;
-        color: rgba(255,255,255,0.5);
-        margin-bottom: 4px;
-        text-transform: uppercase;
-      }
-      .cc-stat-value {
-        font-size: 14px;
-        font-weight: 700;
-        font-family: 'Menlo', monospace;
-        color: #4cd964; /* iOS Green */
-      }
-      .cc-stat-value.warn { color: #ffcc00; }
-    
-      /* 3. 快捷导航模块 */
-      .cc-nav {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
-      }
-      .cc-nav-item {
-        aspect-ratio: 1;
-        background: rgba(255,255,255,0.1);
-        border-radius: 12px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        text-decoration: none;
-        transition: background 0.2s;
-        font-size: 10px;
-      }
-      .cc-nav-item:hover {
-        background: rgba(255,255,255,0.2);
-        color: #fff;
-      }
-      .cc-nav-icon {
-        font-size: 20px;
-        margin-bottom: 4px;
-      }
-    
-    </style>
-    
-    <div id="cc-fab" onclick="toggleControlCenter()">
-      <svg viewBox="0 0 24 24">
-        <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path>
-      </svg>
-    </div>
-    
-    <div id="cc-panel">
-      <div class="cc-card cc-music">
-        <meting-js 
-          server="netease" 
-          type="playlist" 
-          id="4926587734"
-          theme="#4cd964"
-          preload="none"
-          autoplay="false"
-          mini="false"
-          fixed="false"
-          list-folded="true"
-          order="random">
-        </meting-js>
-      </div>
-    
-      <div class="cc-monitor">
-        <div class="cc-stat">
-          <div class="cc-stat-label">Memory</div>
-          <div class="cc-stat-value" id="cc-memory">--</div>
-        </div>
-        <div class="cc-stat">
-          <div class="cc-stat-label">Load Time</div>
-          <div class="cc-stat-value" id="cc-load">--</div>
-        </div>
-      </div>
-    
-      <div class="cc-nav">
-        <a href="/" class="cc-nav-item">
-          <span class="cc-nav-icon">🏠</span>
-          <span>首页</span>
-        </a>
-        <a href="/archives/" class="cc-nav-item">
-          <span class="cc-nav-icon">📂</span>
-          <span>归档</span>
-        </a>
-        <a href="/wiki/" class="cc-nav-item">
-          <span class="cc-nav-icon">📚</span>
-          <span>Wiki</span>
-        </a>
-        <a href="/about/" class="cc-nav-item">
-          <span class="cc-nav-icon">👨‍💻</span>
-          <span>关于</span>
-        </a>
-      </div>
-    </div>
-    
-    <script>
-      // 1. 切换面板显示/隐藏
-      function toggleControlCenter() {
-        const panel = document.getElementById('cc-panel');
-        const fab = document.getElementById('cc-fab');
-        panel.classList.toggle('active');
-        
-        // 简单的触觉反馈动画
-        fab.style.transform = panel.classList.contains('active') ? 'rotate(90deg)' : 'rotate(0)';
-      }
-    
-      // 2. 性能监控逻辑
-      function updateStats() {
-        // 内存监控 (Chrome only)
-        if (performance && performance.memory) {
-          const used = performance.memory.usedJSHeapSize / 1024 / 1024;
-          const memElem = document.getElementById('cc-memory');
-          memElem.innerText = used.toFixed(1) + ' MB';
-          
-          // 内存过高显示警告色
-          if(used > 100) memElem.classList.add('warn');
-          else memElem.classList.remove('warn');
-        } else {
-          document.getElementById('cc-memory').innerText = 'N/A';
-        }
-    
-        // 页面加载时间
-        if (window.performance && window.performance.timing) {
-          const t = window.performance.timing;
-          const loadTime = t.loadEventEnd - t.navigationStart;
-          if (loadTime > 0) {
-            document.getElementById('cc-load').innerText = loadTime + 'ms';
-          }
-        }
-      }
-    
-      // 3. 点击外部关闭面板
-      document.addEventListener('click', function(e) {
-        const panel = document.getElementById('cc-panel');
-        const fab = document.getElementById('cc-fab');
-        if (!panel.contains(e.target) && !fab.contains(e.target) && panel.classList.contains('active')) {
-          panel.classList.remove('active');
-          fab.style.transform = 'rotate(0)';
-        }
-      });
-    
-      // 启动监控循环
-      setInterval(updateStats, 2000);
-      // 初始化一次加载时间
-      window.addEventListener('load', () => setTimeout(updateStats, 1000));
-    </script>
-    <!-- hexo injector body_end end --></body></html>
+</div></body></html>
