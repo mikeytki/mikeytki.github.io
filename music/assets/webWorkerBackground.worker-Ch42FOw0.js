@@ -1,4 +1,4 @@
-<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>(function(){"use strict";const c=["rgb(60, 20, 80)","rgb(100, 40, 60)","rgb(20, 20, 40)","rgb(40, 40, 90)"],x=`
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>(function(){"use strict";const c=["rgb(60, 20, 80)","rgb(100, 40, 60)","rgb(20, 20, 40)","rgb(40, 40, 90)"],x=`
   attribute vec2 position;
   void main() {
     gl_Position = vec4(position, 0.0, 1.0);
